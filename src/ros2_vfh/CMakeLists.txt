@@ -19,6 +19,7 @@ find_package(geometry_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(visualization_msgs REQUIRED)
+find_package(std_srvs REQUIRED)
 
 
 #find_package(tf2_eigen REQUIRED)
@@ -53,6 +54,7 @@ ament_target_dependencies(
   tf2
   tf2_geometry_msgs
   visualization_msgs
+  std_srvs
 )
 
 install(TARGETS vfh_node DESTINATION lib/${PROJECT_NAME})

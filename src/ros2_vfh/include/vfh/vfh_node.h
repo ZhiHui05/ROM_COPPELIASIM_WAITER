@@ -48,6 +48,7 @@
 #include <visualization_msgs/msg/marker_array.hpp>
 
 #include <geometry_msgs/msg/point.hpp>
+#include <std_srvs/srv/trigger.hpp>
 
 #define DEG2RAD(a) ((a) * M_PI / 180.0)
 
@@ -101,6 +102,8 @@ public:
 	rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub_;
 	rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr goalPose_sub_;
 	rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmd_vel_pub_; 
+
+	rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr stop_robot_srv_;
 	
 	// Visualización Markers
 
@@ -115,6 +118,10 @@ public:
 	std::unique_ptr<tf2_ros::Buffer> tf_buffer; 
   	std::shared_ptr<tf2_ros::TransformListener> tf_listener;
 	
+
+	void stopRobotCallback(
+    const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+    std::shared_ptr<std_srvs::srv::Trigger::Response> response);
 
 	void stop_to_cmd_vel();
 

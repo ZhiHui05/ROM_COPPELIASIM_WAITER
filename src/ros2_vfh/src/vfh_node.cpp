@@ -26,6 +26,8 @@
 
 #include <geometry_msgs/msg/point.hpp>
 
+#include <std_srvs/srv/trigger.hpp>
+
 #include <csignal> //interruptions
 
 using namespace std::chrono_literals;
@@ -98,11 +100,36 @@ VFH_node::VFH_node()
 
 	vfh_markers_pub_ = this->create_publisher<visualization_msgs::msg::MarkerArray>("vfh_visualization", 10);
 
+	// ---------- Servicio stop busqueda------------
+	stop_robot_srv_ = this->create_service<std_srvs::srv::Trigger>(
+    "stop_robot",
+    std::bind(&VFH_node::stopRobotCallback, this, std::placeholders::_1, std::placeholders::_2));
+
 }
+
 
 
 VFH_node::~VFH_node(){}
 
+
+void VFH_node::stopRobotCallback(
+    const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+    std::shared_ptr<std_srvs::srv::Trigger::Response> response)
+{
+    (void)request;
+
+    goal_flag = false;
+
+    geometry_msgs::msg::Twist stop_msg;
+    stop_msg.linear.x = 0.0;
+    stop_msg.angular.z = 0.0;
+    cmd_vel_pub_->publish(stop_msg);
+
+    response->success = true;
+    response->message = "Robot stopped. goal_flag set to false.";
+
+    RCLCPP_INFO(this->get_logger(), "Service stop_robot called. Robot stopped and goal_flag set to false.");
+}
 
 void VFH_node::goalPose_callback(const geometry_msgs::msg::PoseStamped::SharedPtr goal_pose_msg)
 {
@@ -243,7 +270,17 @@ void VFH_node::update()
 	publishGoalPosition();
 }
 
-
+void VFH_node::stop_to_cmd_vel()
+{
+    geometry_msgs::msg::Twist stop_msg;
+    stop_msg.linear.x = 0.0;
+    stop_msg.angular.z = 0.0;
+  
+    cmd_vel_pub_->publish(stop_msg);
+    
+    RCLCPP_INFO(this->get_logger(),"Stop command sent");
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+}
 
 void VFH_node::publishVFHVisualization()
 {
@@ -269,18 +306,6 @@ void VFH_node::publishVFHVisualization()
 	}
 
     vfh_markers_pub_->publish(array);
-}
-
-void VFH_node::stop_to_cmd_vel()
-{
-    geometry_msgs::msg::Twist stop_msg;
-    stop_msg.linear.x = 0.0;
-    stop_msg.angular.z = 0.0;
-  
-    cmd_vel_pub_->publish(stop_msg);
-    
-    RCLCPP_INFO(this->get_logger(),"Stop command sent");
-    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 }
 
 

@@ -1,0 +1,10 @@
+/home/zhihuili/RM_prac/build/maintenance_mode_pkg/CMakeFiles/uninstall.dir
+/home/zhihuili/RM_prac/build/maintenance_mode_pkg/CMakeFiles/maintenance_mode_pkg_uninstall.dir
+/home/zhihuili/RM_prac/build/maintenance_mode_pkg/CMakeFiles/maintenance_mode.dir
+/home/zhihuili/RM_prac/build/maintenance_mode_pkg/CMakeFiles/test.dir
+/home/zhihuili/RM_prac/build/maintenance_mode_pkg/CMakeFiles/edit_cache.dir
+/home/zhihuili/RM_prac/build/maintenance_mode_pkg/CMakeFiles/rebuild_cache.dir
+/home/zhihuili/RM_prac/build/maintenance_mode_pkg/CMakeFiles/list_install_components.dir
+/home/zhihuili/RM_prac/build/maintenance_mode_pkg/CMakeFiles/install.dir
+/home/zhihuili/RM_prac/build/maintenance_mode_pkg/CMakeFiles/install/local.dir
+/home/zhihuili/RM_prac/build/maintenance_mode_pkg/CMakeFiles/install/strip.dir

@@ -1,0 +1,61 @@
+[0.058s] Invoking command in '/home/zhihuili/RM_prac/build/intro_ros_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake /home/zhihuili/RM_prac/src/intro_ros_pkg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/zhihuili/RM_prac/install/intro_ros_pkg
+[0.094s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.278s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.288s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[0.323s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.326s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.333s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.343s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.354s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.386s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.387s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.590s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.675s] -- Found tf2_geometry_msgs: 0.25.20 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[0.697s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.700s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.830s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.941s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.942s] -- Configured cppcheck include dirs: 
+[0.942s] -- Configured cppcheck exclude dirs and/or files: 
+[0.942s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.942s] -- Added test 'lint_cmake' to check CMake code style
+[0.942s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.942s] -- Added test 'uncrustify' to check C / C++ code style
+[0.943s] -- Configured uncrustify additional arguments: 
+[0.948s] -- Added test 'xmllint' to check XML markup files
+[0.948s] -- Configuring done
+[0.962s] -- Generating done
+[0.972s] -- Build files have been written to: /home/zhihuili/RM_prac/build/intro_ros_pkg
+[0.999s] Invoked command in '/home/zhihuili/RM_prac/build/intro_ros_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake /home/zhihuili/RM_prac/src/intro_ros_pkg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/zhihuili/RM_prac/install/intro_ros_pkg
+[1.000s] Invoking command in '/home/zhihuili/RM_prac/build/intro_ros_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/intro_ros_pkg -- -j14 -l14
+[1.062s] [ 25%] [32mBuilding CXX object CMakeFiles/subscriber.dir/src/subscriber_node.cpp.o[0m
+[1.072s] [ 50%] [32mBuilding CXX object CMakeFiles/publisher.dir/src/publisher_node.cpp.o[0m
+[8.743s] [ 75%] [32m[1mLinking CXX executable publisher[0m
+[10.461s] [ 75%] Built target publisher
+[16.759s] [100%] [32m[1mLinking CXX executable subscriber[0m
+[17.551s] [100%] Built target subscriber
+[17.573s] Invoked command in '/home/zhihuili/RM_prac/build/intro_ros_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/intro_ros_pkg -- -j14 -l14
+[17.579s] Invoking command in '/home/zhihuili/RM_prac/build/intro_ros_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/intro_ros_pkg
+[17.591s] -- Install configuration: ""
+[17.594s] -- Execute custom install script
+[17.594s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/lib/intro_ros_pkg/publisher
+[17.609s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/lib/intro_ros_pkg/subscriber
+[17.624s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg//launch/intro_ros.launch.py
+[17.639s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg//launch/intro_ros_param.launch.py
+[17.653s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg//launch/intro_ros_remap.launch.py
+[17.668s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/ament_index/resource_index/package_run_dependencies/intro_ros_pkg
+[17.684s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/ament_index/resource_index/parent_prefix_path/intro_ros_pkg
+[17.700s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/environment/ament_prefix_path.sh
+[17.716s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/environment/ament_prefix_path.dsv
+[17.733s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/environment/path.sh
+[17.747s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/environment/path.dsv
+[17.761s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/local_setup.bash
+[17.777s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/local_setup.sh
+[17.793s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/local_setup.zsh
+[17.808s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/local_setup.dsv
+[17.825s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/package.dsv
+[17.840s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/ament_index/resource_index/packages/intro_ros_pkg
+[17.855s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/cmake/intro_ros_pkgConfig.cmake
+[17.871s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/cmake/intro_ros_pkgConfig-version.cmake
+[17.887s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/package.xml
+[17.911s] Invoked command in '/home/zhihuili/RM_prac/build/intro_ros_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/intro_ros_pkg

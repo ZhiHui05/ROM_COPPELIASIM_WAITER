@@ -1,0 +1,24 @@
+[33mCMake Warning at CMakeLists.txt:15 (find_package):
+  By not providing "Findturtlebot3_msgs.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "turtlebot3_msgs", but CMake did not find one.
+
+  Could not find a package configuration file provided by "turtlebot3_msgs"
+  with any of the following names:
+
+    turtlebot3_msgsConfig.cmake
+    turtlebot3_msgs-config.cmake
+
+  Add the installation prefix of "turtlebot3_msgs" to CMAKE_PREFIX_PATH or
+  set "turtlebot3_msgs_DIR" to a directory containing one of the above files.
+  If "turtlebot3_msgs" provides a separate development package or SDK, be
+  sure it has been installed.
+
+[0m
+[31mCMake Error at /opt/ros/humble/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:77 (message):
+  ament_target_dependencies() the passed package name 'turtlebot3_msgs' was
+  not found before
+Call Stack (most recent call first):
+  CMakeLists.txt:21 (ament_target_dependencies)
+
+[0m

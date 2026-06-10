@@ -1,0 +1,2 @@
+source;share/maintenance_mode_pkg/environment/ament_prefix_path.sh
+source;share/maintenance_mode_pkg/environment/path.sh

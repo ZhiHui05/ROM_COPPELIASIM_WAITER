@@ -1,0 +1,89 @@
+[0.060s] Invoking command in '/home/zhihuili/RM_prac/build/turtlebot3_coppeliasim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake /home/zhihuili/RM_prac/src/turtlebot3_coppeliasim -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim
+[0.333s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.334s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.396s] -- Configuring done
+[0.400s] -- Generating done
+[0.402s] -- Build files have been written to: /home/zhihuili/RM_prac/build/turtlebot3_coppeliasim
+[0.407s] Invoked command in '/home/zhihuili/RM_prac/build/turtlebot3_coppeliasim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake /home/zhihuili/RM_prac/src/turtlebot3_coppeliasim -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim
+[0.410s] Invoking command in '/home/zhihuili/RM_prac/build/turtlebot3_coppeliasim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/turtlebot3_coppeliasim -- -j14 -l14
+[0.480s] Invoked command in '/home/zhihuili/RM_prac/build/turtlebot3_coppeliasim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/turtlebot3_coppeliasim -- -j14 -l14
+[0.481s] Invoking command in '/home/zhihuili/RM_prac/build/turtlebot3_coppeliasim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/turtlebot3_coppeliasim
+[0.876s] -- Install configuration: ""
+[0.878s] -- Execute custom install script
+[0.878s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/launch/rviz2.launch.py
+[0.878s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/launch/rviz2_map.launch.py
+[0.879s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/launch/turtlebot3_bill_coppeliasim.launch.py
+[0.879s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/launch/turtlebot3_coppeliasim.launch.py
+[0.879s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/launch/turtlebot3_coppeliasim_dqn.launch.py
+[0.879s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/launch/turtlebot3_coppeliasim_dqn_headless.launch.py
+[0.879s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/launch/turtlebot3_coppeliasim_map.launch.py
+[0.879s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/launch/turtlebot3_coppeliasim_no_rviz2.launch.py
+[0.879s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/launch/turtlebot3_infinite_trajectory_coppeliasim.launch.py
+[0.879s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/launch/turtlebot3_octogonal_path_coppeliasim.launch.py
+[0.879s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/launch/turtlebot3_square_path_coppeliasim.launch.py
+[0.881s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/launch/turtlebot3_vfh_coppeliasim.launch.py
+[0.882s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/param/burger.yaml
+[0.882s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scenes/turtlebot3_burger_ROS2.ttt
+[0.882s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scenes/turtlebot3_burger_ROS2_dqn.ttt
+[0.882s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scenes/turtlebot3_burger_ROS2_dqn_map.ttt
+[0.882s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scenes/turtlebot3_burger_ROS2_dqn_moving_obs.ttt
+[0.882s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scenes/turtlebot3_burger_ROS2_dqn_static_obs.ttt
+[0.882s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scenes/turtlebot3_burger_ROS2_map.ttt
+[0.882s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scenes/turtlebot3_burger_bill_ROS2.ttt
+[0.882s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scenes/turtlebot3_burger_infinite_trajectory_ROS2.ttt
+[0.882s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scenes/turtlebot3_burger_octogonal_path_ROS2.ttt
+[0.882s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scenes/turtlebot3_burger_square_path_ROS2.ttt
+[0.882s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scenes/turtlebot3_burger_vfh_ROS2.ttt
+[0.883s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/rviz/tb3_coppeliasim.rviz
+[0.908s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/rviz/tb3_coppeliasim_map.rviz
+[0.919s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/urdf/common_properties.urdf
+[0.932s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/urdf/turtlebot3_burger.urdf
+[0.947s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/urdf/turtlebot3_burger_cam.urdf
+[0.962s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/urdf/turtlebot3_waffle.urdf
+[0.979s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/urdf/turtlebot3_waffle_pi.urdf
+[0.988s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_burger/model-1_4.sdf
+[1.001s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_burger/model.config
+[1.013s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_burger/model.sdf
+[1.030s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_burger_cam/model-1_4.sdf
+[1.064s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_burger_cam/model.config
+[1.085s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_burger_cam/model.sdf
+[1.101s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_common/meshes/bases/burger_base.stl
+[1.117s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_common/meshes/bases/waffle_base.stl
+[1.135s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_common/meshes/bases/waffle_pi_base.stl
+[1.166s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_common/meshes/burger_base.dae
+[1.183s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_common/meshes/lds.dae
+[1.200s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_common/meshes/r200.dae
+[1.216s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_common/meshes/sensors/astra.dae
+[1.236s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_common/meshes/sensors/astra.jpg
+[1.251s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_common/meshes/sensors/lds.stl
+[1.269s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_common/meshes/sensors/r200.dae
+[1.289s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_common/meshes/sensors/r200.jpg
+[1.302s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_common/meshes/tire.dae
+[1.320s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_common/meshes/waffle_base.dae
+[1.351s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_common/meshes/waffle_pi_base.dae
+[1.383s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_common/meshes/wheels/left_tire.stl
+[1.416s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_common/meshes/wheels/right_tire.stl
+[1.433s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_common/model.config
+[1.455s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_waffle/model-1_4.sdf
+[1.471s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_waffle/model.config
+[1.503s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_waffle/model.sdf
+[1.534s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_waffle_pi/model-1_4_.sdf
+[1.569s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_waffle_pi/model.config
+[1.600s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_waffle_pi/model.sdf
+[1.619s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/ament_index/resource_index/package_run_dependencies/turtlebot3_coppeliasim
+[1.636s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/ament_index/resource_index/parent_prefix_path/turtlebot3_coppeliasim
+[1.670s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/environment/ament_prefix_path.sh
+[1.704s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/environment/ament_prefix_path.dsv
+[1.736s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/environment/path.sh
+[1.762s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/environment/path.dsv
+[1.796s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/local_setup.bash
+[1.826s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/local_setup.sh
+[1.855s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/local_setup.zsh
+[1.875s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/local_setup.dsv
+[1.902s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/package.dsv
+[1.928s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/ament_index/resource_index/packages/turtlebot3_coppeliasim
+[1.955s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.972s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/cmake/turtlebot3_coppeliasimConfig.cmake
+[1.991s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/cmake/turtlebot3_coppeliasimConfig-version.cmake
+[2.007s] -- Symlinking: /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/package.xml
+[2.033s] Invoked command in '/home/zhihuili/RM_prac/build/turtlebot3_coppeliasim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/turtlebot3_coppeliasim

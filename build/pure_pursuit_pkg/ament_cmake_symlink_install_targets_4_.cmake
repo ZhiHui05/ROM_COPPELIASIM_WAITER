@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/zhihuili/RM_prac/build/pure_pursuit_pkg/libwaypoint_tools_lib.so" "TARGETS" "waypoint_tools_lib" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

@@ -1,0 +1,1 @@
+/home/zhihuili/RM_prac/build/pure_pursuit_pkg/rosidl_typesupport_fastrtps_cpp/pure_pursuit_pkg/msg/detail/way_point_path__rosidl_typesupport_fastrtps_cpp.hpp

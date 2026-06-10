@@ -1,0 +1,1 @@
+/home/zhihuili/RM_prac/src/turtlebot3_coppeliasim/launch/rviz2_map.launch.py

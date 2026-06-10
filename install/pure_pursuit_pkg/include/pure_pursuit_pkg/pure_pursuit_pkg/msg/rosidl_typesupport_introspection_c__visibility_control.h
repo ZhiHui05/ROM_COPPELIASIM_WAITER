@@ -1,0 +1,1 @@
+/home/zhihuili/RM_prac/build/pure_pursuit_pkg/rosidl_typesupport_introspection_c/pure_pursuit_pkg/msg/rosidl_typesupport_introspection_c__visibility_control.h

@@ -1,0 +1,183 @@
+[0.065s] Invoking command in '/home/zhihuili/RM_prac/build/pure_pursuit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake /home/zhihuili/RM_prac/src/pure_pursuit_pkg -DCMAKE_INSTALL_PREFIX=/home/zhihuili/RM_prac/install/pure_pursuit_pkg
+[0.096s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.206s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.215s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[0.256s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.258s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.262s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.270s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.279s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.315s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.319s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.451s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.483s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.497s] -- Found tf2: 0.25.20 (/opt/ros/humble/share/tf2/cmake)
+[0.500s] -- Found tf2_geometry_msgs: 0.25.20 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[0.502s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.503s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.547s] -- Found visualization_msgs: 4.9.1 (/opt/ros/humble/share/visualization_msgs/cmake)
+[0.568s] -- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.576s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.799s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.137s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.274s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.297s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.315s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.315s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.315s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.461s] -- Configuring done
+[1.511s] -- Generating done
+[1.524s] -- Build files have been written to: /home/zhihuili/RM_prac/build/pure_pursuit_pkg
+[1.538s] Invoked command in '/home/zhihuili/RM_prac/build/pure_pursuit_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake /home/zhihuili/RM_prac/src/pure_pursuit_pkg -DCMAKE_INSTALL_PREFIX=/home/zhihuili/RM_prac/install/pure_pursuit_pkg
+[1.541s] Invoking command in '/home/zhihuili/RM_prac/build/pure_pursuit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/pure_pursuit_pkg -- -j14 -l14
+[1.598s] [35m[1mConsolidate compiler generated dependencies of target pure_pursuit_pkg__rosidl_generator_c[0m
+[1.604s] [  5%] Built target pure_pursuit_pkg__cpp
+[1.605s] [  5%] Built target pure_pursuit_pkg__rs
+[1.609s] [ 13%] Built target pure_pursuit_pkg__rosidl_generator_c
+[1.610s] [ 13%] Built target ament_cmake_python_symlink_pure_pursuit_pkg
+[1.615s] [35m[1mConsolidate compiler generated dependencies of target pure_pursuit_pkg__rosidl_typesupport_introspection_cpp[0m
+[1.615s] [35m[1mConsolidate compiler generated dependencies of target pure_pursuit_pkg__rosidl_typesupport_cpp[0m
+[1.617s] [35m[1mConsolidate compiler generated dependencies of target pure_pursuit_pkg__rosidl_typesupport_introspection_c[0m
+[1.617s] [35m[1mConsolidate compiler generated dependencies of target pure_pursuit_pkg__rosidl_typesupport_c[0m
+[1.618s] [35m[1mConsolidate compiler generated dependencies of target pure_pursuit_pkg__rosidl_typesupport_fastrtps_c[0m
+[1.620s] [35m[1mConsolidate compiler generated dependencies of target pure_pursuit_pkg__rosidl_typesupport_fastrtps_cpp[0m
+[1.626s] [ 21%] Built target pure_pursuit_pkg__rosidl_typesupport_introspection_cpp
+[1.626s] [ 28%] Built target pure_pursuit_pkg__rosidl_typesupport_cpp
+[1.631s] [ 42%] Built target pure_pursuit_pkg__rosidl_typesupport_fastrtps_cpp
+[1.631s] [ 44%] Built target pure_pursuit_pkg__rosidl_typesupport_c
+[1.632s] [ 52%] Built target pure_pursuit_pkg__rosidl_typesupport_introspection_c
+[1.634s] [ 60%] Built target pure_pursuit_pkg__rosidl_typesupport_fastrtps_c
+[1.636s] [35m[1mConsolidate compiler generated dependencies of target waypoint_tools_lib[0m
+[1.644s] [35m[1mConsolidate compiler generated dependencies of target waypoints_node[0m
+[1.646s] [ 65%] Built target waypoint_tools_lib
+[1.652s] [ 65%] Built target pure_pursuit_pkg
+[1.654s] [35m[1mConsolidate compiler generated dependencies of target pure_pursuit_odom[0m
+[1.662s] [ 71%] Built target waypoints_node
+[1.667s] [ 76%] Built target pure_pursuit_odom
+[1.669s] [ 78%] Built target pure_pursuit_pkg__py
+[1.678s] [35m[1mConsolidate compiler generated dependencies of target pure_pursuit_pkg__rosidl_generator_py[0m
+[1.691s] [ 84%] Built target pure_pursuit_pkg__rosidl_generator_py
+[1.699s] [35m[1mConsolidate compiler generated dependencies of target pure_pursuit_pkg__rosidl_typesupport_c__pyext[0m
+[1.700s] [35m[1mConsolidate compiler generated dependencies of target pure_pursuit_pkg__rosidl_typesupport_introspection_c__pyext[0m
+[1.700s] [35m[1mConsolidate compiler generated dependencies of target pure_pursuit_pkg__rosidl_typesupport_fastrtps_c__pyext[0m
+[1.711s] [100%] Built target pure_pursuit_pkg__rosidl_typesupport_c__pyext
+[1.711s] [100%] Built target pure_pursuit_pkg__rosidl_typesupport_introspection_c__pyext
+[1.711s] [100%] Built target pure_pursuit_pkg__rosidl_typesupport_fastrtps_c__pyext
+[1.766s] running egg_info
+[1.767s] writing pure_pursuit_pkg.egg-info/PKG-INFO
+[1.767s] writing dependency_links to pure_pursuit_pkg.egg-info/dependency_links.txt
+[1.767s] writing top-level names to pure_pursuit_pkg.egg-info/top_level.txt
+[1.768s] reading manifest file 'pure_pursuit_pkg.egg-info/SOURCES.txt'
+[1.769s] writing manifest file 'pure_pursuit_pkg.egg-info/SOURCES.txt'
+[1.793s] [100%] Built target ament_cmake_python_build_pure_pursuit_pkg_egg
+[1.917s] Invoked command in '/home/zhihuili/RM_prac/build/pure_pursuit_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/pure_pursuit_pkg -- -j14 -l14
+[1.921s] Invoking command in '/home/zhihuili/RM_prac/build/pure_pursuit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/pure_pursuit_pkg
+[1.934s] -- Install configuration: ""
+[1.935s] -- Execute custom install script
+[1.935s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/ament_index/resource_index/rosidl_interfaces/pure_pursuit_pkg
+[1.935s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/include/pure_pursuit_pkg/pure_pursuit_pkg/msg/detail/way_point_path__functions.h
+[1.935s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/include/pure_pursuit_pkg/pure_pursuit_pkg/msg/detail/way_point_path__struct.h
+[1.935s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/include/pure_pursuit_pkg/pure_pursuit_pkg/msg/detail/way_point_path__type_support.h
+[1.935s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/include/pure_pursuit_pkg/pure_pursuit_pkg/msg/rosidl_generator_c__visibility_control.h
+[1.935s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/include/pure_pursuit_pkg/pure_pursuit_pkg/msg/way_point_path.h
+[1.935s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/environment/library_path.sh
+[1.935s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/environment/library_path.dsv
+[1.936s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/include/pure_pursuit_pkg/pure_pursuit_pkg/msg/detail/way_point_path__rosidl_typesupport_fastrtps_c.h
+[1.936s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/include/pure_pursuit_pkg/pure_pursuit_pkg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.936s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/include/pure_pursuit_pkg/pure_pursuit_pkg/msg/detail/way_point_path__builder.hpp
+[1.936s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/include/pure_pursuit_pkg/pure_pursuit_pkg/msg/detail/way_point_path__struct.hpp
+[1.936s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/include/pure_pursuit_pkg/pure_pursuit_pkg/msg/detail/way_point_path__traits.hpp
+[1.936s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/include/pure_pursuit_pkg/pure_pursuit_pkg/msg/detail/way_point_path__type_support.hpp
+[1.936s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/include/pure_pursuit_pkg/pure_pursuit_pkg/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.937s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/include/pure_pursuit_pkg/pure_pursuit_pkg/msg/way_point_path.hpp
+[1.937s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/include/pure_pursuit_pkg/pure_pursuit_pkg/msg/detail/way_point_path__rosidl_typesupport_fastrtps_cpp.hpp
+[1.937s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/include/pure_pursuit_pkg/pure_pursuit_pkg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.937s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/include/pure_pursuit_pkg/pure_pursuit_pkg/msg/detail/way_point_path__rosidl_typesupport_introspection_c.h
+[1.938s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/include/pure_pursuit_pkg/pure_pursuit_pkg/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.938s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/include/pure_pursuit_pkg/pure_pursuit_pkg/msg/detail/way_point_path__rosidl_typesupport_introspection_cpp.hpp
+[1.938s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/environment/pythonpath.sh
+[1.938s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/environment/pythonpath.dsv
+[1.938s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg-0.0.0-py3.10.egg-info/PKG-INFO
+[1.938s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.938s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.938s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg-0.0.0-py3.10.egg-info/top_level.txt
+[1.939s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg/__init__.py
+[1.939s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg/_pure_pursuit_pkg_s.ep.rosidl_typesupport_c.c
+[1.939s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg/_pure_pursuit_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.939s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg/_pure_pursuit_pkg_s.ep.rosidl_typesupport_introspection_c.c
+[1.939s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg/libpure_pursuit_pkg__rosidl_generator_py.so
+[1.939s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg/msg/__init__.py
+[1.939s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg/msg/_way_point_path.py
+[1.939s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg/msg/_way_point_path_s.c
+[1.940s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg/pure_pursuit_pkg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.940s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg/pure_pursuit_pkg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.940s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg/pure_pursuit_pkg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.940s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg/pure_pursuit_pkg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.941s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg/pure_pursuit_pkg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.941s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg/pure_pursuit_pkg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.941s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/ament_index/resource_index/rust_packages/pure_pursuit_pkg
+[1.941s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/rust/Cargo.toml
+[1.941s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/rust/build.rs
+[1.942s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/rust/src/lib.rs
+[1.942s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/rust/src/msg.rs
+[1.942s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/rust/src/msg/rmw.rs
+[1.942s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/msg/WayPointPath.idl
+[1.942s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/msg/WayPointPath.msg
+[1.942s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib/pure_pursuit_pkg/pure_pursuit_odom
+[1.942s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib/pure_pursuit_pkg/waypoints_node
+[1.942s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/msg/WayPointPath.msg
+[1.942s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/config/path.yaml
+[1.942s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/launch/pure_pursuit_controller.launch.py
+[1.942s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/launch/pure_pursuit_controller_eventhandler.launch.py
+[1.942s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib/libwaypoint_tools_lib.so
+[1.942s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/ament_index/resource_index/package_run_dependencies/pure_pursuit_pkg
+[1.942s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/ament_index/resource_index/parent_prefix_path/pure_pursuit_pkg
+[1.943s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/environment/ament_prefix_path.sh
+[1.943s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/environment/ament_prefix_path.dsv
+[1.943s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/environment/path.sh
+[1.943s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/environment/path.dsv
+[1.943s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/local_setup.bash
+[1.943s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/local_setup.sh
+[1.943s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/local_setup.zsh
+[1.943s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/local_setup.dsv
+[1.943s] -- Symlinking: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/package.dsv
+[1.961s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/ament_index/resource_index/packages/pure_pursuit_pkg
+[1.961s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/rosidl_cmake-extras.cmake
+[1.961s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.961s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.961s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/ament_cmake_export_libraries-extras.cmake
+[1.962s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/ament_cmake_export_targets-extras.cmake
+[1.962s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.962s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.962s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/pure_pursuit_pkgConfig.cmake
+[1.962s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/pure_pursuit_pkgConfig-version.cmake
+[1.962s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/package.xml
+[1.964s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib/libpure_pursuit_pkg__rosidl_generator_c.so
+[1.964s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib/libpure_pursuit_pkg__rosidl_typesupport_fastrtps_c.so
+[1.965s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib/libpure_pursuit_pkg__rosidl_typesupport_fastrtps_cpp.so
+[1.965s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib/libpure_pursuit_pkg__rosidl_typesupport_introspection_c.so
+[1.965s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib/libpure_pursuit_pkg__rosidl_typesupport_c.so
+[1.966s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib/libpure_pursuit_pkg__rosidl_typesupport_introspection_cpp.so
+[1.966s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib/libpure_pursuit_pkg__rosidl_typesupport_cpp.so
+[1.999s] Listing '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg'...
+[1.999s] Compiling '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg/__init__.py'...
+[1.999s] Listing '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/local/lib/python3.10/dist-packages/pure_pursuit_pkg/msg'...
+[2.003s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib/libpure_pursuit_pkg__rosidl_generator_py.so
+[2.004s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/export_pure_pursuit_pkg__rosidl_generator_cExport.cmake
+[2.004s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/export_pure_pursuit_pkg__rosidl_generator_cExport-noconfig.cmake
+[2.004s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/export_pure_pursuit_pkg__rosidl_typesupport_fastrtps_cExport.cmake
+[2.005s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/export_pure_pursuit_pkg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[2.005s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/export_pure_pursuit_pkg__rosidl_generator_cppExport.cmake
+[2.005s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/export_pure_pursuit_pkg__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.005s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/export_pure_pursuit_pkg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[2.005s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/pure_pursuit_pkg__rosidl_typesupport_introspection_cExport.cmake
+[2.005s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/pure_pursuit_pkg__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.005s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/pure_pursuit_pkg__rosidl_typesupport_cExport.cmake
+[2.007s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/pure_pursuit_pkg__rosidl_typesupport_cExport-noconfig.cmake
+[2.007s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/pure_pursuit_pkg__rosidl_typesupport_introspection_cppExport.cmake
+[2.007s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/pure_pursuit_pkg__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.007s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/pure_pursuit_pkg__rosidl_typesupport_cppExport.cmake
+[2.007s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/pure_pursuit_pkg__rosidl_typesupport_cppExport-noconfig.cmake
+[2.007s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/export_pure_pursuit_pkg__rosidl_generator_pyExport.cmake
+[2.007s] -- Up-to-date: /home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/cmake/export_pure_pursuit_pkg__rosidl_generator_pyExport-noconfig.cmake
+[2.035s] Invoked command in '/home/zhihuili/RM_prac/build/pure_pursuit_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/pure_pursuit_pkg

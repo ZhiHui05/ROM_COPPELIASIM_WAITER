@@ -1,0 +1,1 @@
+Invoking command in '/home/zhihuili/RM_prac/build/bringup_turtlebot3_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake /home/zhihuili/RM_prac/src/bringup_turtlebot3_pkg -DCMAKE_INSTALL_PREFIX=/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg

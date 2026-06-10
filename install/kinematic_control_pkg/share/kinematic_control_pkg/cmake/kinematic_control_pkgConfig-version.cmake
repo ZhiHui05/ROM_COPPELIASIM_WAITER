@@ -1,0 +1,1 @@
+/home/zhihuili/RM_prac/build/kinematic_control_pkg/ament_cmake_core/kinematic_control_pkgConfig-version.cmake

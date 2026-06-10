@@ -46,7 +46,9 @@ def launch_setup(context, *args, **kwargs):
         '1': '',
         '2': '_static_obs',
         '3': '_moving_obs',
-        '4': '_map'
+        '4': '_map',
+        '5': '_waiter' #Mapa para nuestro trabajo
+        
     }
 
     suffix = suffix_map.get(scene_num, '')
@@ -73,7 +75,7 @@ def generate_launch_description():
         DeclareLaunchArgument(
             'scene_num',
             default_value='1',
-            description='Scene number (1 to 4)'
+            description='Scene number (1 to 5)'
         ),
         
         OpaqueFunction(function=launch_setup)

@@ -1,0 +1,4 @@
+source;share/maintenance_mode_pkg/local_setup.bash
+source;share/maintenance_mode_pkg/local_setup.dsv
+source;share/maintenance_mode_pkg/local_setup.sh
+source;share/maintenance_mode_pkg/local_setup.zsh

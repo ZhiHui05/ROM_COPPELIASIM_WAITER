@@ -1,0 +1,63 @@
+[1.100s] Invoking command in '/home/zhihuili/RM_prac/src/turtlebot3_dqn': PYTHONPATH=/home/zhihuili/RM_prac/build/turtlebot3_dqn/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_dqn build --build-base /home/zhihuili/RM_prac/build/turtlebot3_dqn/build install --record /home/zhihuili/RM_prac/build/turtlebot3_dqn/install.log --single-version-externally-managed install_data
+[1.791s] running egg_info
+[1.792s] creating ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info
+[1.795s] writing ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/PKG-INFO
+[1.795s] writing dependency_links to ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/dependency_links.txt
+[1.795s] writing entry points to ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/entry_points.txt
+[1.795s] writing requirements to ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/requires.txt
+[1.795s] writing top-level names to ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/top_level.txt
+[1.795s] writing manifest file '../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/SOURCES.txt'
+[1.796s] reading manifest file '../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/SOURCES.txt'
+[1.796s] writing manifest file '../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/SOURCES.txt'
+[1.796s] running build
+[1.796s] running build_py
+[1.796s] creating /home/zhihuili/RM_prac/build/turtlebot3_dqn/build
+[1.797s] creating /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib
+[1.797s] creating /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn
+[1.797s] copying turtlebot3_dqn/dqn_agent.py -> /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn
+[1.797s] copying turtlebot3_dqn/dqn_gazebo.py -> /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn
+[1.797s] copying turtlebot3_dqn/result_graph.py -> /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn
+[1.797s] copying turtlebot3_dqn/dqn_test.py -> /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn
+[1.797s] copying turtlebot3_dqn/dqn_coppeliasim.py -> /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn
+[1.797s] copying turtlebot3_dqn/action_graph.py -> /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn
+[1.797s] copying turtlebot3_dqn/dqn_environment.py -> /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn
+[1.797s] copying turtlebot3_dqn/__init__.py -> /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn
+[1.797s] running install
+[1.797s] running install_lib
+[1.797s] creating /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn
+[1.797s] copying /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn/dqn_agent.py -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn
+[1.798s] copying /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn/dqn_gazebo.py -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn
+[1.798s] copying /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn/result_graph.py -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn
+[1.803s] copying /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn/dqn_test.py -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn
+[1.804s] copying /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn/dqn_coppeliasim.py -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn
+[1.804s] copying /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn/action_graph.py -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn
+[1.804s] copying /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn/dqn_environment.py -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn
+[1.804s] copying /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn/__init__.py -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn
+[1.804s] byte-compiling /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn/dqn_agent.py to dqn_agent.cpython-310.pyc
+[1.804s] byte-compiling /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn/dqn_gazebo.py to dqn_gazebo.cpython-310.pyc
+[1.804s] byte-compiling /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn/result_graph.py to result_graph.cpython-310.pyc
+[1.805s] byte-compiling /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn/dqn_test.py to dqn_test.cpython-310.pyc
+[1.805s] byte-compiling /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn/dqn_coppeliasim.py to dqn_coppeliasim.cpython-310.pyc
+[1.805s] byte-compiling /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn/action_graph.py to action_graph.cpython-310.pyc
+[1.805s] byte-compiling /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn/dqn_environment.py to dqn_environment.cpython-310.pyc
+[1.805s] byte-compiling /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn/__init__.py to __init__.cpython-310.pyc
+[1.805s] running install_data
+[1.805s] creating /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/ament_index
+[1.805s] creating /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/ament_index/resource_index
+[1.805s] creating /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/ament_index/resource_index/packages
+[1.806s] copying resource/turtlebot3_dqn -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/ament_index/resource_index/packages
+[1.806s] copying package.xml -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn
+[1.806s] creating /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/launch
+[1.806s] creating /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_models
+[1.806s] running install_egg_info
+[1.806s] Copying ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn-1.0.3-py3.10.egg-info
+[1.806s] running install_scripts
+[1.806s] Installing action_graph script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.806s] Installing dqn_agent script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.806s] Installing dqn_coppeliasim script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.806s] Installing dqn_environment script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.806s] Installing dqn_gazebo script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.806s] Installing dqn_test script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.806s] Installing result_graph script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.807s] writing list of installed files to '/home/zhihuili/RM_prac/build/turtlebot3_dqn/install.log'
+[1.807s] Invoked command in '/home/zhihuili/RM_prac/src/turtlebot3_dqn' returned '0': PYTHONPATH=/home/zhihuili/RM_prac/build/turtlebot3_dqn/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_dqn build --build-base /home/zhihuili/RM_prac/build/turtlebot3_dqn/build install --record /home/zhihuili/RM_prac/build/turtlebot3_dqn/install.log --single-version-externally-managed install_data

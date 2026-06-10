@@ -1,0 +1,1 @@
+/home/zhihuili/RM_prac/build/pure_pursuit_pkg/rosidl_generator_cpp/pure_pursuit_pkg/msg/detail/way_point_path__type_support.hpp

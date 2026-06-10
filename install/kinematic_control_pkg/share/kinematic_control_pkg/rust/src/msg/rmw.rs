@@ -1,0 +1,1 @@
+/home/zhihuili/RM_prac/build/kinematic_control_pkg/rosidl_generator_rs/kinematic_control_pkg/rust/src/msg/rmw.rs

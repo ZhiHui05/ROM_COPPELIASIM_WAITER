@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/zhihuili/RM_prac/build/pure_pursuit_pkg/pure_pursuit_odom" "/home/zhihuili/RM_prac/build/pure_pursuit_pkg/waypoints_node" "TARGETS" "pure_pursuit_odom" "waypoints_node" "DESTINATION" "lib/pure_pursuit_pkg")

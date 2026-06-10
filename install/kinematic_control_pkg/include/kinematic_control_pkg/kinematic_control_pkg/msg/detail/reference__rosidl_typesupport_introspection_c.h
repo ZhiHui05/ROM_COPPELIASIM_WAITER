@@ -1,0 +1,1 @@
+/home/zhihuili/RM_prac/build/kinematic_control_pkg/rosidl_typesupport_introspection_c/kinematic_control_pkg/msg/detail/reference__rosidl_typesupport_introspection_c.h

@@ -1,0 +1,48 @@
+[0.103s] Invoking command in '/home/zhihuili/RM_prac/build/transformations_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake /home/zhihuili/RM_prac/src/transformations_pkg -DCMAKE_INSTALL_PREFIX=/home/zhihuili/RM_prac/install/transformations_pkg
+[0.484s] -- The C compiler identification is GNU 11.4.0
+[0.484s] -- The CXX compiler identification is GNU 11.4.0
+[0.484s] -- Detecting C compiler ABI info
+[0.484s] -- Detecting C compiler ABI info - done
+[0.484s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.484s] -- Detecting C compile features
+[0.484s] -- Detecting C compile features - done
+[0.489s] -- Detecting CXX compiler ABI info
+[0.663s] -- Detecting CXX compiler ABI info - done
+[0.676s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.676s] -- Detecting CXX compile features
+[0.680s] -- Detecting CXX compile features - done
+[0.693s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.127s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.330s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[1.463s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.470s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.481s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.496s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.530s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.601s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.608s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.751s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.826s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.914s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.932s] -- Looking for pthread.h
+[2.057s] -- Looking for pthread.h - found
+[2.057s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.176s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.177s] -- Found Threads: TRUE  
+[2.260s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[2.274s] -- Found tf2: 0.25.20 (/opt/ros/humble/share/tf2/cmake)
+[2.294s] -- Found tf2_geometry_msgs: 0.25.20 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[2.322s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[2.324s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[2.324s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[2.473s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.599s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.599s] -- Configured cppcheck include dirs: 
+[2.599s] -- Configured cppcheck exclude dirs and/or files: 
+[2.600s] -- Added test 'lint_cmake' to check CMake code style
+[2.601s] -- Added test 'uncrustify' to check C / C++ code style
+[2.601s] -- Configured uncrustify additional arguments: 
+[2.602s] -- Added test 'xmllint' to check XML markup files
+[2.604s] -- Configuring done
+[2.625s] -- Generating done
+[2.632s] -- Build files have been written to: /home/zhihuili/RM_prac/build/transformations_pkg

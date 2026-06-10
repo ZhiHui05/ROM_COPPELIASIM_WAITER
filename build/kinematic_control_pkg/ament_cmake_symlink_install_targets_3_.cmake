@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/zhihuili/RM_prac/build/kinematic_control_pkg/controller_odom" "/home/zhihuili/RM_prac/build/kinematic_control_pkg/infinite_reference_node" "TARGETS" "controller_odom" "infinite_reference_node" "DESTINATION" "lib/kinematic_control_pkg")

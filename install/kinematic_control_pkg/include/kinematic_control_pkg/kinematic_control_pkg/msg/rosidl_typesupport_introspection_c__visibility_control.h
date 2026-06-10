@@ -1,0 +1,1 @@
+/home/zhihuili/RM_prac/build/kinematic_control_pkg/rosidl_typesupport_introspection_c/kinematic_control_pkg/msg/rosidl_typesupport_introspection_c__visibility_control.h

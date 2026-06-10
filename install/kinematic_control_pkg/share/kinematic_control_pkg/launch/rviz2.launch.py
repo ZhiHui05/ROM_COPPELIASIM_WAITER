@@ -1,0 +1,1 @@
+/home/zhihuili/RM_prac/src/kinematic_control_pkg/launch/rviz2.launch.py

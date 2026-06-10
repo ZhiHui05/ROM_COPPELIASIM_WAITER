@@ -1,0 +1,1 @@
+Invoking command in '/home/zhihuili/RM_prac/build/ros2_vfh': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake /home/zhihuili/RM_prac/src/ros2_vfh -DCMAKE_INSTALL_PREFIX=/home/zhihuili/RM_prac/install/ros2_vfh

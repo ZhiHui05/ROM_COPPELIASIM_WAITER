@@ -1,0 +1,1 @@
+/home/zhihuili/RM_prac/build/pure_pursuit_pkg/rosidl_generator_py/pure_pursuit_pkg/msg/__init__.py

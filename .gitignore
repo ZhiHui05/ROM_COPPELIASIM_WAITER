@@ -1,0 +1,17 @@
+# Build, install, log
+build/
+install/
+log/
+
+# Model checkpoints (se regeneran al entrenar)
+src/turtlebot3_dqn/saved_model/*.h5
+src/turtlebot3_dqn/saved_model/*.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# CoppeliaSim backup
+*.ttt.bak
+*.ttm.bak

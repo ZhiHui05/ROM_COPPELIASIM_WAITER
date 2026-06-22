@@ -18,6 +18,8 @@
 # Authors: Ryan Shim, Gilbert, ChanHyeong Lee, Hyungyu Kim
 
 import collections
+import json
+import math
 import os
 import sys
 import time
@@ -83,7 +85,8 @@ class DQNTest(Node):
         super().__init__('dqn_test')
         self.declare_parameter('model_file', '')
         self.declare_parameter('use_gpu', False)
-        self.declare_parameter('verbose', True)
+        self.declare_parameter('verbose', False)
+        self.declare_parameter('model_dir', '')
         model_file = self.get_parameter('model_file').get_parameter_value().string_value
         use_gpu = self.get_parameter('use_gpu').get_parameter_value().bool_value
         self.verbose = self.get_parameter('verbose').get_parameter_value().bool_value
@@ -100,22 +103,44 @@ class DQNTest(Node):
         if not use_gpu:
             self.tf.config.set_visible_devices([], 'GPU')
 
-        self.state_size = 26
         self.action_size = 5
 
         self.memory = collections.deque(maxlen=1000000)
 
-        self.model = self.build_model()
-        model_path = os.path.join(
-            os.path.dirname(os.path.dirname(os.path.realpath(__file__))),
-            'saved_model',
-            model_file
-        )
+        custom_dir = self.get_parameter('model_dir').get_parameter_value().string_value
+        if custom_dir:
+            model_dir_path = custom_dir
+        else:
+            p = os.path.realpath(__file__)
+            for _ in range(6):
+                p = os.path.dirname(p)
+            install_prefix = p
+            src_model_dir = os.path.join(
+                os.path.dirname(install_prefix), 'src', 'turtlebot3_dqn', 'saved_model'
+            )
+            if os.path.isdir(os.path.dirname(src_model_dir)):
+                model_dir_path = src_model_dir
+            else:
+                model_dir_path = os.path.join(
+                    os.path.expanduser('~'), 'turtlebot3_dqn_models'
+                )
+        os.makedirs(model_dir_path, exist_ok=True)
+        model_path = os.path.join(model_dir_path, model_file)
 
-        loaded_model = self.load_model(
+        self.model = self.load_model(
             model_path, compile=False, custom_objects={'mse': self.MeanSquaredError()}
         )
-        self.model.set_weights(loaded_model.get_weights())
+        self.model.compile(loss=self.MeanSquaredError(), optimizer=self.RMSprop(learning_rate=0.00025))
+        self.state_size = self.model.input_shape[1]
+
+        json_path = model_path.replace('.h5', '.json')
+        self.state_version = 2
+        if os.path.exists(json_path):
+            with open(json_path) as f:
+                param = json.load(f)
+                self.state_version = param.get('state_version', 1)
+        else:
+            self.state_version = 1
 
         self.rl_agent_interface_client = self.create_client(Dqn, 'rl_agent_interface')
 
@@ -138,8 +163,24 @@ class DQNTest(Node):
         model.compile(loss=self.MeanSquaredError(), optimizer=self.RMSprop(learning_rate=0.00025))
         return model
 
+    def adapt_state(self, state):
+        state = numpy.asarray(state, dtype=numpy.float32)
+
+        if self.state_version < 2:
+            dist_raw = state[0] * 5.0
+            angle_raw = state[1] * math.pi
+            lidar_raw = state[5:] * 3.5
+            state = numpy.concatenate([[dist_raw], [angle_raw], lidar_raw])
+
+        if len(state) < self.state_size:
+            state = numpy.pad(state, (0, self.state_size - len(state)))
+        elif len(state) > self.state_size:
+            state = state[:self.state_size]
+        return state
+
     def get_action(self, state):
         state = numpy.asarray(state)
+        state = self.adapt_state(state)
         q_values = self.model.predict(state.reshape(1, -1), verbose=self.verbose)
         return int(numpy.argmax(q_values[0]))
 

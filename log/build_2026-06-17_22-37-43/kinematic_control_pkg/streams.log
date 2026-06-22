@@ -1,0 +1,135 @@
+[0.033s] Invoking command in '/home/zhihuili/RM_prac/build/kinematic_control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/kinematic_control_pkg -- -j14 -l14
+[0.109s] [  2%] Built target kinematic_control_pkg__cpp
+[0.109s] [  5%] Built target kinematic_control_pkg__rs
+[0.124s] [  5%] Built target ament_cmake_python_symlink_kinematic_control_pkg
+[0.124s] [ 13%] Built target kinematic_control_pkg__rosidl_generator_c
+[0.156s] [ 22%] Built target kinematic_control_pkg__rosidl_typesupport_fastrtps_cpp
+[0.157s] [ 30%] Built target kinematic_control_pkg__rosidl_typesupport_introspection_cpp
+[0.173s] [ 38%] Built target kinematic_control_pkg__rosidl_typesupport_c
+[0.174s] [ 47%] Built target kinematic_control_pkg__rosidl_typesupport_cpp
+[0.187s] [ 55%] Built target kinematic_control_pkg__rosidl_typesupport_introspection_c
+[0.187s] [ 63%] Built target kinematic_control_pkg__rosidl_typesupport_fastrtps_c
+[0.198s] [ 69%] Built target controller_odom
+[0.198s] [ 69%] Built target kinematic_control_pkg
+[0.199s] [ 75%] Built target infinite_reference_node
+[0.209s] [ 77%] Built target kinematic_control_pkg__py
+[0.233s] [ 83%] Built target kinematic_control_pkg__rosidl_generator_py
+[0.253s] [ 88%] Built target kinematic_control_pkg__rosidl_typesupport_fastrtps_c__pyext
+[0.254s] [ 94%] Built target kinematic_control_pkg__rosidl_typesupport_c__pyext
+[0.256s] [100%] Built target kinematic_control_pkg__rosidl_typesupport_introspection_c__pyext
+[0.291s] running egg_info
+[0.292s] writing kinematic_control_pkg.egg-info/PKG-INFO
+[0.292s] writing dependency_links to kinematic_control_pkg.egg-info/dependency_links.txt
+[0.292s] writing top-level names to kinematic_control_pkg.egg-info/top_level.txt
+[0.293s] reading manifest file 'kinematic_control_pkg.egg-info/SOURCES.txt'
+[0.293s] writing manifest file 'kinematic_control_pkg.egg-info/SOURCES.txt'
+[0.314s] [100%] Built target ament_cmake_python_build_kinematic_control_pkg_egg
+[0.327s] Invoked command in '/home/zhihuili/RM_prac/build/kinematic_control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/kinematic_control_pkg -- -j14 -l14
+[0.328s] Invoking command in '/home/zhihuili/RM_prac/build/kinematic_control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/kinematic_control_pkg
+[0.333s] -- Install configuration: ""
+[0.333s] -- Execute custom install script
+[0.333s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/ament_index/resource_index/rosidl_interfaces/kinematic_control_pkg
+[0.334s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/include/kinematic_control_pkg/kinematic_control_pkg/msg/detail/reference__functions.h
+[0.334s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/include/kinematic_control_pkg/kinematic_control_pkg/msg/detail/reference__struct.h
+[0.334s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/include/kinematic_control_pkg/kinematic_control_pkg/msg/detail/reference__type_support.h
+[0.334s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/include/kinematic_control_pkg/kinematic_control_pkg/msg/reference.h
+[0.334s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/include/kinematic_control_pkg/kinematic_control_pkg/msg/rosidl_generator_c__visibility_control.h
+[0.334s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/environment/library_path.sh
+[0.334s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/environment/library_path.dsv
+[0.334s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/include/kinematic_control_pkg/kinematic_control_pkg/msg/detail/reference__rosidl_typesupport_fastrtps_c.h
+[0.335s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/include/kinematic_control_pkg/kinematic_control_pkg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.335s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/include/kinematic_control_pkg/kinematic_control_pkg/msg/detail/reference__builder.hpp
+[0.335s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/include/kinematic_control_pkg/kinematic_control_pkg/msg/detail/reference__struct.hpp
+[0.335s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/include/kinematic_control_pkg/kinematic_control_pkg/msg/detail/reference__traits.hpp
+[0.335s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/include/kinematic_control_pkg/kinematic_control_pkg/msg/detail/reference__type_support.hpp
+[0.335s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/include/kinematic_control_pkg/kinematic_control_pkg/msg/reference.hpp
+[0.335s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/include/kinematic_control_pkg/kinematic_control_pkg/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.335s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/include/kinematic_control_pkg/kinematic_control_pkg/msg/detail/reference__rosidl_typesupport_fastrtps_cpp.hpp
+[0.335s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/include/kinematic_control_pkg/kinematic_control_pkg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.336s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/include/kinematic_control_pkg/kinematic_control_pkg/msg/detail/reference__rosidl_typesupport_introspection_c.h
+[0.336s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/include/kinematic_control_pkg/kinematic_control_pkg/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.336s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/include/kinematic_control_pkg/kinematic_control_pkg/msg/detail/reference__rosidl_typesupport_introspection_cpp.hpp
+[0.336s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/environment/pythonpath.sh
+[0.337s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/environment/pythonpath.dsv
+[0.337s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg-0.0.0-py3.10.egg-info/PKG-INFO
+[0.337s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.337s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.337s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg-0.0.0-py3.10.egg-info/top_level.txt
+[0.337s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg/__init__.py
+[0.338s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg/_kinematic_control_pkg_s.ep.rosidl_typesupport_c.c
+[0.338s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg/_kinematic_control_pkg_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.338s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg/_kinematic_control_pkg_s.ep.rosidl_typesupport_introspection_c.c
+[0.338s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg/kinematic_control_pkg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.338s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg/kinematic_control_pkg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.338s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg/kinematic_control_pkg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.339s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg/libkinematic_control_pkg__rosidl_generator_py.so
+[0.339s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg/msg/__init__.py
+[0.339s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg/msg/_reference.py
+[0.339s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg/msg/_reference_s.c
+[0.339s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg/kinematic_control_pkg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.340s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg/kinematic_control_pkg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.340s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg/kinematic_control_pkg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.340s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/ament_index/resource_index/rust_packages/kinematic_control_pkg
+[0.340s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/rust/Cargo.toml
+[0.341s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/rust/build.rs
+[0.341s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/rust/src/lib.rs
+[0.341s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/rust/src/msg.rs
+[0.341s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/rust/src/msg/rmw.rs
+[0.341s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/msg/Reference.idl
+[0.342s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/msg/Reference.msg
+[0.342s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/lib/kinematic_control_pkg/controller_odom
+[0.342s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/lib/kinematic_control_pkg/infinite_reference_node
+[0.342s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/msg/Reference.msg
+[0.343s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/launch/kinematic_controller.launch.py
+[0.343s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/launch/rviz2.launch.py
+[0.343s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/rviz/tb3_rviz2.rviz
+[0.343s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/ament_index/resource_index/package_run_dependencies/kinematic_control_pkg
+[0.343s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/ament_index/resource_index/parent_prefix_path/kinematic_control_pkg
+[0.343s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/environment/ament_prefix_path.sh
+[0.343s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/environment/ament_prefix_path.dsv
+[0.343s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/environment/path.sh
+[0.344s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/environment/path.dsv
+[0.344s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/local_setup.bash
+[0.344s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/local_setup.sh
+[0.344s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/local_setup.zsh
+[0.344s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/local_setup.dsv
+[0.344s] -- Symlinking: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/package.dsv
+[0.350s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/ament_index/resource_index/packages/kinematic_control_pkg
+[0.350s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/rosidl_cmake-extras.cmake
+[0.350s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.351s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.351s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/ament_cmake_export_libraries-extras.cmake
+[0.351s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/ament_cmake_export_targets-extras.cmake
+[0.351s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.351s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.352s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/kinematic_control_pkgConfig.cmake
+[0.352s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/kinematic_control_pkgConfig-version.cmake
+[0.352s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/package.xml
+[0.352s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/lib/libkinematic_control_pkg__rosidl_generator_c.so
+[0.352s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/lib/libkinematic_control_pkg__rosidl_typesupport_fastrtps_c.so
+[0.352s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/lib/libkinematic_control_pkg__rosidl_typesupport_fastrtps_cpp.so
+[0.352s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/lib/libkinematic_control_pkg__rosidl_typesupport_introspection_c.so
+[0.352s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/lib/libkinematic_control_pkg__rosidl_typesupport_c.so
+[0.352s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/lib/libkinematic_control_pkg__rosidl_typesupport_introspection_cpp.so
+[0.352s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/lib/libkinematic_control_pkg__rosidl_typesupport_cpp.so
+[0.386s] Listing '/home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg'...
+[0.386s] Listing '/home/zhihuili/RM_prac/install/kinematic_control_pkg/local/lib/python3.10/dist-packages/kinematic_control_pkg/msg'...
+[0.390s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/lib/libkinematic_control_pkg__rosidl_generator_py.so
+[0.390s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/export_kinematic_control_pkg__rosidl_generator_cExport.cmake
+[0.390s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/export_kinematic_control_pkg__rosidl_generator_cExport-noconfig.cmake
+[0.390s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/export_kinematic_control_pkg__rosidl_typesupport_fastrtps_cExport.cmake
+[0.390s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/export_kinematic_control_pkg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.390s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/export_kinematic_control_pkg__rosidl_generator_cppExport.cmake
+[0.390s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/export_kinematic_control_pkg__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.390s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/export_kinematic_control_pkg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.390s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/kinematic_control_pkg__rosidl_typesupport_introspection_cExport.cmake
+[0.391s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/kinematic_control_pkg__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.391s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/kinematic_control_pkg__rosidl_typesupport_cExport.cmake
+[0.391s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/kinematic_control_pkg__rosidl_typesupport_cExport-noconfig.cmake
+[0.391s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/kinematic_control_pkg__rosidl_typesupport_introspection_cppExport.cmake
+[0.391s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/kinematic_control_pkg__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.391s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/kinematic_control_pkg__rosidl_typesupport_cppExport.cmake
+[0.391s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/kinematic_control_pkg__rosidl_typesupport_cppExport-noconfig.cmake
+[0.391s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/export_kinematic_control_pkg__rosidl_generator_pyExport.cmake
+[0.391s] -- Up-to-date: /home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/cmake/export_kinematic_control_pkg__rosidl_generator_pyExport-noconfig.cmake
+[0.420s] Invoked command in '/home/zhihuili/RM_prac/build/kinematic_control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/kinematic_control_pkg

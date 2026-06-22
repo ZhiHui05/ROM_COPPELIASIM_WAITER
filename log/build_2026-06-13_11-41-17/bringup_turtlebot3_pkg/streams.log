@@ -1,0 +1,23 @@
+[0.037s] Invoking command in '/home/zhihuili/RM_prac/build/bringup_turtlebot3_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/bringup_turtlebot3_pkg -- -j14 -l14
+[0.104s] [100%] Built target cmd_vel_publisher
+[0.159s] Invoked command in '/home/zhihuili/RM_prac/build/bringup_turtlebot3_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/bringup_turtlebot3_pkg -- -j14 -l14
+[0.160s] Invoking command in '/home/zhihuili/RM_prac/build/bringup_turtlebot3_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/bringup_turtlebot3_pkg
+[0.195s] -- Install configuration: ""
+[0.195s] -- Execute custom install script
+[0.195s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/lib/bringup_turtlebot3_pkg/cmd_vel_publisher
+[0.195s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/ament_index/resource_index/package_run_dependencies/bringup_turtlebot3_pkg
+[0.196s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/ament_index/resource_index/parent_prefix_path/bringup_turtlebot3_pkg
+[0.196s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/environment/ament_prefix_path.sh
+[0.196s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/environment/ament_prefix_path.dsv
+[0.199s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/environment/path.sh
+[0.199s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/environment/path.dsv
+[0.199s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/local_setup.bash
+[0.199s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/local_setup.sh
+[0.199s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/local_setup.zsh
+[0.199s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/local_setup.dsv
+[0.199s] -- Symlinking: /home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/package.dsv
+[0.200s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/ament_index/resource_index/packages/bringup_turtlebot3_pkg
+[0.200s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/cmake/bringup_turtlebot3_pkgConfig.cmake
+[0.200s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/cmake/bringup_turtlebot3_pkgConfig-version.cmake
+[0.200s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/package.xml
+[0.228s] Invoked command in '/home/zhihuili/RM_prac/build/bringup_turtlebot3_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/bringup_turtlebot3_pkg

@@ -1,0 +1,29 @@
+[0.068s] Invoking command in '/home/zhihuili/RM_prac/build/navigation_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/navigation_pkg -- -j14 -l14
+[0.131s] Invoked command in '/home/zhihuili/RM_prac/build/navigation_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/navigation_pkg -- -j14 -l14
+[0.140s] Invoking command in '/home/zhihuili/RM_prac/build/navigation_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/navigation_pkg
+[0.149s] -- Install configuration: ""
+[0.149s] -- Execute custom install script
+[0.149s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/launch/navigation.launch.py
+[0.149s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/launch/navigation_with_speed_limit.launch.py
+[0.149s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/launch/speed_limit.launch.py
+[0.149s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/launch/turtlebot3_navigation.launch.py
+[0.149s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/param/keepout_params.yaml
+[0.150s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/param/nav2_params.yaml
+[0.150s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/param/nav2_params_speed_limit.yaml
+[0.150s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/param/speed_params.yaml
+[0.150s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/ament_index/resource_index/package_run_dependencies/navigation_pkg
+[0.150s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/ament_index/resource_index/parent_prefix_path/navigation_pkg
+[0.150s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/environment/ament_prefix_path.sh
+[0.150s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/environment/ament_prefix_path.dsv
+[0.150s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/environment/path.sh
+[0.150s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/environment/path.dsv
+[0.150s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/local_setup.bash
+[0.150s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/local_setup.sh
+[0.150s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/local_setup.zsh
+[0.150s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/local_setup.dsv
+[0.150s] -- Symlinking: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/package.dsv
+[0.191s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/ament_index/resource_index/packages/navigation_pkg
+[0.191s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/cmake/navigation_pkgConfig.cmake
+[0.191s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/cmake/navigation_pkgConfig-version.cmake
+[0.191s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/package.xml
+[0.219s] Invoked command in '/home/zhihuili/RM_prac/build/navigation_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/navigation_pkg

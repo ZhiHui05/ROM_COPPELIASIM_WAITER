@@ -315,8 +315,8 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install(DIRECTORY "launch" "param" "scenes" "rviz" "urdf" "models" "DESTINATION" "share/turtlebot3_coppeliasim")
-ament_cmake_symlink_install_directory("/home/zhihuili/RM_prac/src/turtlebot3_coppeliasim" DIRECTORY "launch" "param" "scenes" "rviz" "urdf" "models" "DESTINATION" "share/turtlebot3_coppeliasim")
+# install(DIRECTORY "launch" "param" "scenes" "rviz" "urdf" "models" "scripts" "DESTINATION" "share/turtlebot3_coppeliasim")
+ament_cmake_symlink_install_directory("/home/zhihuili/RM_prac/src/turtlebot3_coppeliasim" DIRECTORY "launch" "param" "scenes" "rviz" "urdf" "models" "scripts" "DESTINATION" "share/turtlebot3_coppeliasim")
 
 # install(FILES "/home/zhihuili/RM_prac/build/turtlebot3_coppeliasim/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_coppeliasim" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/zhihuili/RM_prac/src/turtlebot3_coppeliasim" FILES "/home/zhihuili/RM_prac/build/turtlebot3_coppeliasim/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_coppeliasim" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

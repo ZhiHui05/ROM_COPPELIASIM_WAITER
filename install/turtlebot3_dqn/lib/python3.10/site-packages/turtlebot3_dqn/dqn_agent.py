@@ -22,6 +22,7 @@ import datetime
 import json
 import math
 import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import random
 import sys
 import time
@@ -120,7 +121,9 @@ class DQNAgent(Node):
         self.declare_parameter('max_training_episodes', 1000)
         self.declare_parameter('model_file', '')
         self.declare_parameter('use_gpu', False)
-        self.declare_parameter('verbose', True)
+        self.declare_parameter('verbose', False)
+        self.declare_parameter('lidar_samples', 25)
+        self.declare_parameter('model_dir', '')
         self.max_training_episodes = self.get_parameter(
             'max_training_episodes'
         ).get_parameter_value().integer_value
@@ -140,9 +143,13 @@ class DQNAgent(Node):
 
         if not use_gpu:
             self.tf.config.set_visible_devices([], 'GPU')
+            self.tf.config.run_functions_eagerly(True)
 
         self.train_mode = True
-        self.state_size = 26
+        lidar_samples = self.get_parameter(
+            'lidar_samples'
+        ).get_parameter_value().integer_value
+        self.state_size = lidar_samples + 5
         self.action_size = 5
 
         self.done = False
@@ -162,19 +169,43 @@ class DQNAgent(Node):
         self.replay_memory = collections.deque(maxlen=500000)
         self.min_replay_memory_size = 5000
 
-        self.model = self.create_qnetwork()
-        self.use_pretrained_model = bool(model_file)
-        self.load_episode = 0
-        self.model_dir_path = os.path.join(
-            os.path.dirname(os.path.dirname(os.path.realpath(__file__))),
-            'saved_model'
-        )
+        custom_dir = self.get_parameter('model_dir').get_parameter_value().string_value
+        if custom_dir:
+            self.model_dir_path = custom_dir
+        else:
+            p = os.path.realpath(__file__)
+            for _ in range(6):
+                p = os.path.dirname(p)
+            install_prefix = p
+            src_model_dir = os.path.join(
+                os.path.dirname(install_prefix), 'src', 'turtlebot3_dqn', 'saved_model'
+            )
+            if os.path.isdir(os.path.dirname(src_model_dir)):
+                self.model_dir_path = src_model_dir
+            else:
+                self.model_dir_path = os.path.join(
+                    os.path.expanduser('~'), 'turtlebot3_dqn_models'
+                )
+        os.makedirs(self.model_dir_path, exist_ok=True)
+        self.get_logger().info('Model save directory: ' + self.model_dir_path)
         model_path = os.path.join(
             self.model_dir_path,
             model_file
         )
+        self.use_pretrained_model = bool(model_file)
+        self.load_episode = 0
+        self.state_version = 2
         if self.use_pretrained_model:
-            self.model.set_weights(self.load_model(model_path).get_weights())
+            self.model = self.load_model(model_path)
+            self.state_size = self.model.input_shape[1]
+            lr_schedule_load = self.tf.keras.optimizers.schedules.ExponentialDecay(
+                initial_learning_rate=self.learning_rate,
+                decay_steps=10000, decay_rate=0.96, staircase=True
+            )
+            self.model.compile(
+                loss=self.MeanSquaredError(),
+                optimizer=self.Adam(learning_rate=lr_schedule_load, clipnorm=1.0),
+                run_eagerly=True)
             json_path = model_path.replace('.h5', '.json')
             if os.path.exists(json_path):
                 with open(json_path) as outfile:
@@ -182,6 +213,7 @@ class DQNAgent(Node):
                     self.epsilon = param.get('epsilon', self.epsilon)
                     self.step_counter = param.get('step_counter', self.step_counter)
                     self.load_episode = param.get('trained_episodes', self.load_episode)
+                    self.state_version = param.get('state_version', 1)
                 if self.load_episode >= self.max_training_episodes:
                     self.get_logger().error('Loaded model episode exceeds max training episodes.')
                     raise ValueError('Loaded model episode exceeds max training episodes.')
@@ -189,8 +221,16 @@ class DQNAgent(Node):
                 self.get_logger().warn(
                     f'JSON file not found for {model_file}, using default values.'
                 )
+                self.state_version = 1
+        else:
+            self.model = self.create_qnetwork()
 
-        self.target_model = self.create_qnetwork()
+        self.target_model = self.tf.keras.models.clone_model(self.model)
+        self.target_model.set_weights(self.model.get_weights())
+        self.target_model.compile(
+            loss=self.MeanSquaredError(),
+            optimizer=self.Adam(learning_rate=self.learning_rate, clipnorm=1.0),
+            run_eagerly=True)
         self.update_target_after = 5000
         self.target_update_after_counter = 0
         self.update_target_model()
@@ -231,7 +271,7 @@ class DQNAgent(Node):
             while True:
                 local_step += 1
 
-                q_values = self.model.predict(state, verbose=self.verbose)
+                q_values = self.model.predict(state, verbose=0)
                 sum_max_q += float(numpy.max(q_values))
 
                 action = int(self.get_action(state))
@@ -269,8 +309,8 @@ class DQNAgent(Node):
                         'memory length:', len(self.replay_memory),
                         'epsilon:', self.epsilon)
 
-                    param_keys = ['epsilon', 'step_counter', 'trained_episodes']
-                    param_values = [self.epsilon, self.step_counter, episode]
+                    param_keys = ['epsilon', 'step_counter', 'trained_episodes', 'state_version']
+                    param_values = [self.epsilon, self.step_counter, episode, 2]
                     param_dictionary = dict(zip(param_keys, param_values))
                     break
 
@@ -295,6 +335,27 @@ class DQNAgent(Node):
                     with open(json_path, 'w') as outfile:
                         json.dump(param_dictionary, outfile)
 
+        if self.train_mode:
+            idx = 1
+            while True:
+                model_path = os.path.join(
+                    self.model_dir_path,
+                    f'model{idx}.h5'
+                )
+                json_path = os.path.join(
+                    self.model_dir_path,
+                    f'model{idx}.json'
+                )
+                if not os.path.exists(model_path):
+                    break
+                idx += 1
+            param_keys = ['epsilon', 'step_counter', 'trained_episodes', 'state_version']
+            param_values = [self.epsilon, self.step_counter, self.max_training_episodes, 2]
+            param_dictionary = dict(zip(param_keys, param_values))
+            self.model.save(model_path)
+            with open(json_path, 'w') as outfile:
+                json.dump(param_dictionary, outfile)
+
     def env_make(self):
         while not self.make_environment_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().warn(
@@ -314,7 +375,9 @@ class DQNAgent(Node):
         rclpy.spin_until_future_complete(self, future)
         if future.result() is not None:
             state = future.result().state
-            state = numpy.reshape(numpy.asarray(state), [1, self.state_size])
+            state = numpy.asarray(state)
+            state = self.adapt_state(state)
+            state = numpy.reshape(state, [1, self.state_size])
         else:
             self.get_logger().error(
                 'Exception while calling service: {0}'.format(future.exception()))
@@ -330,11 +393,26 @@ class DQNAgent(Node):
             if lucky > (1 - self.epsilon):
                 result = random.randint(0, self.action_size - 1)
             else:
-                result = numpy.argmax(self.model.predict(state, verbose=self.verbose))
+                result = numpy.argmax(self.model.predict(state, verbose=0))
         else:
-            result = numpy.argmax(self.model.predict(state, verbose=self.verbose))
+            result = numpy.argmax(self.model.predict(state, verbose=0))
 
         return result
+
+    def adapt_state(self, state):
+        state = numpy.asarray(state, dtype=numpy.float32)
+
+        if self.state_version < 2:
+            dist_raw = state[0] * 5.0
+            angle_raw = state[1] * math.pi
+            lidar_raw = state[5:] * 3.5
+            state = numpy.concatenate([[dist_raw], [angle_raw], lidar_raw])
+
+        if len(state) < self.state_size:
+            state = numpy.pad(state, (0, self.state_size - len(state)))
+        elif len(state) > self.state_size:
+            state = state[:self.state_size]
+        return state
 
     def step(self, action):
         req = Dqn.Request()
@@ -349,7 +427,9 @@ class DQNAgent(Node):
 
         if future.result() is not None:
             next_state = future.result().state
-            next_state = numpy.reshape(numpy.asarray(next_state), [1, self.state_size])
+            next_state = numpy.asarray(next_state)
+            next_state = self.adapt_state(next_state)
+            next_state = numpy.reshape(next_state, [1, self.state_size])
             reward = future.result().reward
             done = future.result().done
         else:
@@ -365,9 +445,16 @@ class DQNAgent(Node):
         model.add(self.Dense(256, activation='relu'))
         model.add(self.Dense(128, activation='relu'))
         model.add(self.Dense(self.action_size, activation='linear'))
+        lr_schedule = self.tf.keras.optimizers.schedules.ExponentialDecay(
+            initial_learning_rate=self.learning_rate,
+            decay_steps=10000,
+            decay_rate=0.96,
+            staircase=True
+        )
         model.compile(
             loss=self.MeanSquaredError(),
-            optimizer=self.Adam(learning_rate=self.learning_rate))
+            optimizer=self.Adam(learning_rate=lr_schedule, clipnorm=1.0),
+            run_eagerly=True)
         model.summary()
 
         return model
@@ -387,11 +474,11 @@ class DQNAgent(Node):
 
         current_states = numpy.array([transition[0] for transition in data_in_mini_batch])
         current_states = current_states.squeeze()
-        current_qvalues_list = self.model.predict(current_states, verbose=self.verbose)
+        current_qvalues_list = self.model.predict(current_states, verbose=0)
 
         next_states = numpy.array([transition[3] for transition in data_in_mini_batch])
         next_states = next_states.squeeze()
-        next_qvalues_list = self.target_model.predict(next_states, verbose=self.verbose)
+        next_qvalues_list = self.target_model.predict(next_states, verbose=0)
 
         x_train = []
         y_train = []
@@ -415,8 +502,8 @@ class DQNAgent(Node):
         y_train = numpy.reshape(y_train, [len(data_in_mini_batch), self.action_size])
 
         self.model.fit(
-            self.tf.convert_to_tensor(x_train, self.tf.float32),
-            self.tf.convert_to_tensor(y_train, self.tf.float32),
+            x_train,
+            y_train,
             batch_size=self.batch_size, verbose=0
         )
         self.target_update_after_counter += 1

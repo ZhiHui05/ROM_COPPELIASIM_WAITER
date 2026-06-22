@@ -1,0 +1,28 @@
+[0.060s] Invoking command in '/home/zhihuili/RM_prac/build/intro_ros_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/intro_ros_pkg -- -j14 -l14
+[0.130s] [ 50%] Built target publisher
+[0.131s] [100%] Built target subscriber
+[0.169s] Invoked command in '/home/zhihuili/RM_prac/build/intro_ros_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/intro_ros_pkg -- -j14 -l14
+[0.176s] Invoking command in '/home/zhihuili/RM_prac/build/intro_ros_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/intro_ros_pkg
+[0.201s] -- Install configuration: ""
+[0.205s] -- Execute custom install script
+[0.205s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/lib/intro_ros_pkg/publisher
+[0.206s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/lib/intro_ros_pkg/subscriber
+[0.206s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg//launch/intro_ros.launch.py
+[0.206s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg//launch/intro_ros_param.launch.py
+[0.207s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg//launch/intro_ros_remap.launch.py
+[0.207s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/ament_index/resource_index/package_run_dependencies/intro_ros_pkg
+[0.207s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/ament_index/resource_index/parent_prefix_path/intro_ros_pkg
+[0.207s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/environment/ament_prefix_path.sh
+[0.208s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/environment/ament_prefix_path.dsv
+[0.208s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/environment/path.sh
+[0.208s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/environment/path.dsv
+[0.208s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/local_setup.bash
+[0.209s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/local_setup.sh
+[0.209s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/local_setup.zsh
+[0.209s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/local_setup.dsv
+[0.209s] -- Symlinking: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/package.dsv
+[0.214s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/ament_index/resource_index/packages/intro_ros_pkg
+[0.214s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/cmake/intro_ros_pkgConfig.cmake
+[0.214s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/cmake/intro_ros_pkgConfig-version.cmake
+[0.214s] -- Up-to-date symlink: /home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/package.xml
+[0.239s] Invoked command in '/home/zhihuili/RM_prac/build/intro_ros_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/intro_ros_pkg

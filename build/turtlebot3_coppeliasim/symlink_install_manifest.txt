@@ -1,3 +1,5 @@
+/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/launch/__pycache__/turtlebot3_coppeliasim_dqn.launch.cpython-312.pyc
+/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/launch/__pycache__/turtlebot3_coppeliasim_dqn_headless.launch.cpython-312.pyc
 /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/launch/rviz2.launch.py
 /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/launch/rviz2_map.launch.py
 /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/launch/turtlebot3_bill_coppeliasim.launch.py
@@ -16,6 +18,7 @@
 /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scenes/turtlebot3_burger_ROS2_dqn_map.ttt
 /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scenes/turtlebot3_burger_ROS2_dqn_moving_obs.ttt
 /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scenes/turtlebot3_burger_ROS2_dqn_static_obs.ttt
+/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scenes/turtlebot3_burger_ROS2_dqn_waiter.ttt
 /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scenes/turtlebot3_burger_ROS2_map.ttt
 /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scenes/turtlebot3_burger_bill_ROS2.ttt
 /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scenes/turtlebot3_burger_infinite_trajectory_ROS2.ttt
@@ -58,6 +61,8 @@
 /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_waffle_pi/model-1_4_.sdf
 /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_waffle_pi/model.config
 /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/models/turtlebot3_waffle_pi/model.sdf
+/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scripts/waiter_goals.lua
+/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/scripts/waiter_table_goals.lua
 /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/ament_index/resource_index/package_run_dependencies/turtlebot3_coppeliasim
 /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/ament_index/resource_index/parent_prefix_path/turtlebot3_coppeliasim
 /home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/environment/ament_prefix_path.sh

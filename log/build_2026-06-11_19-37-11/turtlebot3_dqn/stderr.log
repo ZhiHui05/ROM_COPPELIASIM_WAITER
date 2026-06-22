@@ -1,0 +1,5 @@
+  File "/home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn/dqn_environment.py", line 59
+    self.tables = self.parse_table_goals(
+                                        ^
+SyntaxError: '(' was never closed
+

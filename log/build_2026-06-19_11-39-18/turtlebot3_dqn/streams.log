@@ -1,0 +1,112 @@
+[0.736s] Invoking command in '/home/zhihuili/RM_prac/src/turtlebot3_dqn': CMAKE_PREFIX_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs:/home/zhihuili/RM_prac/install/upv_maps_pkg:/home/zhihuili/RM_prac/install/maintenance_mode_pkg:/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim:/home/zhihuili/RM_prac/install/transformations_pkg:/home/zhihuili/RM_prac/install/slam_pkg:/home/zhihuili/RM_prac/install/ros2_vfh:/home/zhihuili/RM_prac/install/pure_pursuit_pkg:/home/zhihuili/RM_prac/install/navigation_pkg:/home/zhihuili/RM_prac/install/kinematic_control_pkg:/home/zhihuili/RM_prac/install/intro_ros_pkg:/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg LD_LIBRARY_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs/lib:/home/zhihuili/sumo_env/lib:/home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib:/home/zhihuili/RM_prac/install/kinematic_control_pkg/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/zhihuili/RM_prac/build/turtlebot3_dqn/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_dqn build --build-base /home/zhihuili/RM_prac/build/turtlebot3_dqn/build install --record /home/zhihuili/RM_prac/build/turtlebot3_dqn/install.log --single-version-externally-managed install_data
+[1.006s] running egg_info
+[1.007s] writing ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/PKG-INFO
+[1.007s] writing dependency_links to ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/dependency_links.txt
+[1.007s] writing entry points to ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/entry_points.txt
+[1.007s] writing requirements to ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/requires.txt
+[1.007s] writing top-level names to ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/top_level.txt
+[1.009s] reading manifest file '../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/SOURCES.txt'
+[1.011s] writing manifest file '../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/SOURCES.txt'
+[1.011s] running build
+[1.011s] running build_py
+[1.011s] copying turtlebot3_dqn/dqn_agent.py -> /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn
+[1.011s] copying turtlebot3_dqn/dqn_test.py -> /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn
+[1.011s] copying turtlebot3_dqn/dqn_environment.py -> /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn
+[1.011s] running install
+[1.012s] running install_lib
+[1.012s] copying /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn/dqn_agent.py -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn
+[1.013s] copying /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn/dqn_test.py -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn
+[1.013s] copying /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn/dqn_environment.py -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn
+[1.013s] byte-compiling /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn/dqn_agent.py to dqn_agent.cpython-310.pyc
+[1.018s] byte-compiling /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn/dqn_test.py to dqn_test.cpython-310.pyc
+[1.019s] byte-compiling /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn/dqn_environment.py to dqn_environment.cpython-310.pyc
+[1.021s] running install_data
+[1.021s] copying saved_model/model36.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.024s] copying saved_model/model29.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.026s] copying saved_model/model27.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.026s] copying saved_model/model26.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.028s] copying saved_model/model24.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.029s] copying saved_model/model29.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.029s] copying saved_model/model21.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.031s] copying saved_model/model32.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.034s] copying saved_model/model25.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.034s] copying saved_model/model9.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.036s] copying saved_model/model19.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.036s] copying saved_model/model6.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.036s] copying saved_model/model1.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.037s] copying saved_model/model17.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.039s] copying saved_model/model2.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.039s] copying saved_model/model36.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.040s] copying saved_model/model34.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.040s] copying saved_model/model4.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.040s] copying saved_model/model15.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.040s] copying saved_model/model23.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.040s] copying saved_model/model30.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.043s] copying saved_model/model16.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.045s] copying saved_model/model28.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.045s] copying saved_model/model18.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.047s] copying saved_model/model19.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.050s] copying saved_model/model42.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.050s] copying saved_model/model34.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.053s] copying saved_model/model12.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.055s] copying saved_model/model26.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.056s] copying saved_model/model24.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.058s] copying saved_model/model11.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.058s] copying saved_model/model31.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.062s] copying saved_model/model9.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.062s] copying saved_model/model17.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.062s] copying saved_model/model15.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.065s] copying saved_model/model4.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.068s] copying saved_model/model37.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.070s] copying saved_model/model23.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.073s] copying saved_model/model8.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.075s] copying saved_model/model7.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.078s] copying saved_model/model2.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.078s] copying saved_model/model11.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.085s] copying saved_model/model28.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.085s] copying saved_model/model13.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.087s] copying saved_model/model31.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.087s] copying saved_model/model33.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.089s] copying saved_model/model7.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.089s] copying saved_model/model14.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.089s] copying saved_model/model1.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.090s] copying saved_model/model30.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.090s] copying saved_model/model10.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.092s] copying saved_model/model35.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.095s] copying saved_model/model42.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.096s] copying saved_model/model8.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.096s] copying saved_model/model18.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.096s] copying saved_model/model27.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.098s] copying saved_model/model22.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.099s] copying saved_model/model13.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.099s] copying saved_model/model3.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.099s] copying saved_model/model5.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.099s] copying saved_model/model14.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.102s] copying saved_model/model32.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.102s] copying saved_model/model25.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.105s] copying saved_model/model3.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.107s] copying saved_model/model35.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.107s] copying saved_model/model33.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.108s] copying saved_model/model22.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.110s] copying saved_model/model20.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.113s] copying saved_model/model12.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.113s] copying saved_model/model6.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.116s] copying saved_model/model20.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.116s] copying saved_model/model5.h5 -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.118s] copying saved_model/model16.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.119s] copying saved_model/model21.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.119s] copying saved_model/model37.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.119s] copying saved_model/model10.json -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/saved_model
+[1.119s] running install_egg_info
+[1.121s] removing '/home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn-1.0.3-py3.10.egg-info' (and everything under it)
+[1.122s] Copying ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn-1.0.3-py3.10.egg-info
+[1.123s] running install_scripts
+[1.146s] Installing action_graph script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.146s] Installing dqn_agent script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.146s] Installing dqn_coppeliasim script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.146s] Installing dqn_environment script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.146s] Installing dqn_gazebo script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.146s] Installing dqn_test script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.147s] Installing result_graph script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.147s] writing list of installed files to '/home/zhihuili/RM_prac/build/turtlebot3_dqn/install.log'
+[1.179s] Invoked command in '/home/zhihuili/RM_prac/src/turtlebot3_dqn' returned '0': CMAKE_PREFIX_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs:/home/zhihuili/RM_prac/install/upv_maps_pkg:/home/zhihuili/RM_prac/install/maintenance_mode_pkg:/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim:/home/zhihuili/RM_prac/install/transformations_pkg:/home/zhihuili/RM_prac/install/slam_pkg:/home/zhihuili/RM_prac/install/ros2_vfh:/home/zhihuili/RM_prac/install/pure_pursuit_pkg:/home/zhihuili/RM_prac/install/navigation_pkg:/home/zhihuili/RM_prac/install/kinematic_control_pkg:/home/zhihuili/RM_prac/install/intro_ros_pkg:/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg LD_LIBRARY_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs/lib:/home/zhihuili/sumo_env/lib:/home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib:/home/zhihuili/RM_prac/install/kinematic_control_pkg/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/zhihuili/RM_prac/build/turtlebot3_dqn/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_dqn build --build-base /home/zhihuili/RM_prac/build/turtlebot3_dqn/build install --record /home/zhihuili/RM_prac/build/turtlebot3_dqn/install.log --single-version-externally-managed install_data

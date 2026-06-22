@@ -1,0 +1,915 @@
+[0.060s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.060s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=14, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7638e9e1b490>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7638e9f5c430>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7638e9f5c430>>, mixin_verb=('build',))
+[0.141s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.141s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.141s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.141s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.141s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.141s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.141s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/zhihuili/RM_prac'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup_turtlebot3_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup_turtlebot3_pkg) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup_turtlebot3_pkg) by extension 'ignore_ament_install'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup_turtlebot3_pkg) by extensions ['colcon_pkg']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup_turtlebot3_pkg) by extension 'colcon_pkg'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup_turtlebot3_pkg) by extensions ['colcon_meta']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup_turtlebot3_pkg) by extension 'colcon_meta'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup_turtlebot3_pkg) by extensions ['ros']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(src/bringup_turtlebot3_pkg) by extension 'ros'
+[0.150s] DEBUG:colcon.colcon_core.package_identification:Package 'src/bringup_turtlebot3_pkg' with type 'ros.ament_cmake' and name 'bringup_turtlebot3_pkg'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/intro_ros_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/intro_ros_pkg) by extension 'ignore'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/intro_ros_pkg) by extension 'ignore_ament_install'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/intro_ros_pkg) by extensions ['colcon_pkg']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/intro_ros_pkg) by extension 'colcon_pkg'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/intro_ros_pkg) by extensions ['colcon_meta']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/intro_ros_pkg) by extension 'colcon_meta'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/intro_ros_pkg) by extensions ['ros']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(src/intro_ros_pkg) by extension 'ros'
+[0.151s] DEBUG:colcon.colcon_core.package_identification:Package 'src/intro_ros_pkg' with type 'ros.ament_cmake' and name 'intro_ros_pkg'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_control_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_control_pkg) by extension 'ignore'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_control_pkg) by extension 'ignore_ament_install'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_control_pkg) by extensions ['colcon_pkg']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_control_pkg) by extension 'colcon_pkg'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_control_pkg) by extensions ['colcon_meta']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_control_pkg) by extension 'colcon_meta'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_control_pkg) by extensions ['ros']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/kinematic_control_pkg) by extension 'ros'
+[0.151s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kinematic_control_pkg' with type 'ros.ament_cmake' and name 'kinematic_control_pkg'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/maintenance_mode_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/maintenance_mode_pkg) by extension 'ignore'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/maintenance_mode_pkg) by extension 'ignore_ament_install'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(src/maintenance_mode_pkg) by extensions ['colcon_pkg']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/maintenance_mode_pkg) by extension 'colcon_pkg'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/maintenance_mode_pkg) by extensions ['colcon_meta']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/maintenance_mode_pkg) by extension 'colcon_meta'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/maintenance_mode_pkg) by extensions ['ros']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/maintenance_mode_pkg) by extension 'ros'
+[0.152s] DEBUG:colcon.colcon_core.package_identification:Package 'src/maintenance_mode_pkg' with type 'ros.ament_cmake' and name 'maintenance_mode_pkg'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation_pkg) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation_pkg) by extension 'ignore_ament_install'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation_pkg) by extensions ['colcon_pkg']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation_pkg) by extension 'colcon_pkg'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation_pkg) by extensions ['colcon_meta']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation_pkg) by extension 'colcon_meta'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation_pkg) by extensions ['ros']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/navigation_pkg) by extension 'ros'
+[0.152s] DEBUG:colcon.colcon_core.package_identification:Package 'src/navigation_pkg' with type 'ros.ament_cmake' and name 'navigation_pkg'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit_pkg) by extension 'ignore'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit_pkg) by extension 'ignore_ament_install'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit_pkg) by extensions ['colcon_pkg']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit_pkg) by extension 'colcon_pkg'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit_pkg) by extensions ['colcon_meta']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit_pkg) by extension 'colcon_meta'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit_pkg) by extensions ['ros']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/pure_pursuit_pkg) by extension 'ros'
+[0.153s] DEBUG:colcon.colcon_core.package_identification:Package 'src/pure_pursuit_pkg' with type 'ros.ament_cmake' and name 'pure_pursuit_pkg'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_vfh) by extensions ['ignore', 'ignore_ament_install']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_vfh) by extension 'ignore'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_vfh) by extension 'ignore_ament_install'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_vfh) by extensions ['colcon_pkg']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_vfh) by extension 'colcon_pkg'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_vfh) by extensions ['colcon_meta']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_vfh) by extension 'colcon_meta'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_vfh) by extensions ['ros']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_vfh) by extension 'ros'
+[0.154s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_vfh' with type 'ros.ament_cmake' and name 'ros2_vfh'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_pkg) by extension 'ignore'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_pkg) by extension 'ignore_ament_install'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_pkg) by extensions ['colcon_pkg']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_pkg) by extension 'colcon_pkg'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_pkg) by extensions ['colcon_meta']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_pkg) by extension 'colcon_meta'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_pkg) by extensions ['ros']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/slam_pkg) by extension 'ros'
+[0.154s] DEBUG:colcon.colcon_core.package_identification:Package 'src/slam_pkg' with type 'ros.ament_cmake' and name 'slam_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/transformations_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/transformations_pkg) by extension 'ignore'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/transformations_pkg) by extension 'ignore_ament_install'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/transformations_pkg) by extensions ['colcon_pkg']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/transformations_pkg) by extension 'colcon_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/transformations_pkg) by extensions ['colcon_meta']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/transformations_pkg) by extension 'colcon_meta'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/transformations_pkg) by extensions ['ros']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/transformations_pkg) by extension 'ros'
+[0.155s] DEBUG:colcon.colcon_core.package_identification:Package 'src/transformations_pkg' with type 'ros.ament_cmake' and name 'transformations_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_coppeliasim) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_coppeliasim) by extension 'ignore'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_coppeliasim) by extension 'ignore_ament_install'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_coppeliasim) by extensions ['colcon_pkg']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_coppeliasim) by extension 'colcon_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_coppeliasim) by extensions ['colcon_meta']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_coppeliasim) by extension 'colcon_meta'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_coppeliasim) by extensions ['ros']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_coppeliasim) by extension 'ros'
+[0.156s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot3_coppeliasim' with type 'ros.ament_cmake' and name 'turtlebot3_coppeliasim'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_dqn) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_dqn) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_dqn) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_dqn) by extensions ['colcon_pkg']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_dqn) by extension 'colcon_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_dqn) by extensions ['colcon_meta']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_dqn) by extension 'colcon_meta'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_dqn) by extensions ['ros']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_dqn) by extension 'ros'
+[0.156s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot3_dqn' with type 'ros.ament_python' and name 'turtlebot3_dqn'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_msgs) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_msgs) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_msgs) by extensions ['colcon_pkg']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_msgs) by extension 'colcon_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_msgs) by extensions ['colcon_meta']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_msgs) by extension 'colcon_meta'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_msgs) by extensions ['ros']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(src/turtlebot3_msgs) by extension 'ros'
+[0.157s] DEBUG:colcon.colcon_core.package_identification:Package 'src/turtlebot3_msgs' with type 'ros.ament_cmake' and name 'turtlebot3_msgs'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/upv_maps_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(src/upv_maps_pkg) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/upv_maps_pkg) by extension 'ignore_ament_install'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/upv_maps_pkg) by extensions ['colcon_pkg']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/upv_maps_pkg) by extension 'colcon_pkg'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/upv_maps_pkg) by extensions ['colcon_meta']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/upv_maps_pkg) by extension 'colcon_meta'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/upv_maps_pkg) by extensions ['ros']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/upv_maps_pkg) by extension 'ros'
+[0.158s] DEBUG:colcon.colcon_core.package_identification:Package 'src/upv_maps_pkg' with type 'ros.ament_cmake' and name 'upv_maps_pkg'
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.181s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.182s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 13 installed packages in /home/zhihuili/RM_prac/install
+[0.182s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/zhihuili/sim_ros2_interface/install
+[0.183s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 325 installed packages in /opt/ros/humble
+[0.184s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'bringup_turtlebot3_pkg' build argument 'cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'bringup_turtlebot3_pkg' build argument 'cmake_target' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'bringup_turtlebot3_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'bringup_turtlebot3_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'bringup_turtlebot3_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'bringup_turtlebot3_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'bringup_turtlebot3_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'bringup_turtlebot3_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'bringup_turtlebot3_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.206s] DEBUG:colcon.colcon_core.verb:Building package 'bringup_turtlebot3_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zhihuili/RM_prac/build/bringup_turtlebot3_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg', 'merge_install': False, 'path': '/home/zhihuili/RM_prac/src/bringup_turtlebot3_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'intro_ros_pkg' build argument 'cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'intro_ros_pkg' build argument 'cmake_target' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'intro_ros_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'intro_ros_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'intro_ros_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'intro_ros_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'intro_ros_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'intro_ros_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.206s] Level 5:colcon.colcon_core.verb:set package 'intro_ros_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.207s] DEBUG:colcon.colcon_core.verb:Building package 'intro_ros_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zhihuili/RM_prac/build/intro_ros_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zhihuili/RM_prac/install/intro_ros_pkg', 'merge_install': False, 'path': '/home/zhihuili/RM_prac/src/intro_ros_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'kinematic_control_pkg' build argument 'cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'kinematic_control_pkg' build argument 'cmake_target' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'kinematic_control_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'kinematic_control_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'kinematic_control_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'kinematic_control_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'kinematic_control_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'kinematic_control_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'kinematic_control_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.207s] DEBUG:colcon.colcon_core.verb:Building package 'kinematic_control_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zhihuili/RM_prac/build/kinematic_control_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zhihuili/RM_prac/install/kinematic_control_pkg', 'merge_install': False, 'path': '/home/zhihuili/RM_prac/src/kinematic_control_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'navigation_pkg' build argument 'cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'navigation_pkg' build argument 'cmake_target' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'navigation_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'navigation_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'navigation_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'navigation_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'navigation_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'navigation_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'navigation_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.207s] DEBUG:colcon.colcon_core.verb:Building package 'navigation_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zhihuili/RM_prac/build/navigation_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zhihuili/RM_prac/install/navigation_pkg', 'merge_install': False, 'path': '/home/zhihuili/RM_prac/src/navigation_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'pure_pursuit_pkg' build argument 'cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'pure_pursuit_pkg' build argument 'cmake_target' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'pure_pursuit_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'pure_pursuit_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'pure_pursuit_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'pure_pursuit_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'pure_pursuit_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'pure_pursuit_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'pure_pursuit_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.207s] DEBUG:colcon.colcon_core.verb:Building package 'pure_pursuit_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zhihuili/RM_prac/build/pure_pursuit_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zhihuili/RM_prac/install/pure_pursuit_pkg', 'merge_install': False, 'path': '/home/zhihuili/RM_prac/src/pure_pursuit_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'ros2_vfh' build argument 'cmake_args' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'ros2_vfh' build argument 'cmake_target' from command line to 'None'
+[0.207s] Level 5:colcon.colcon_core.verb:set package 'ros2_vfh' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'ros2_vfh' build argument 'cmake_clean_cache' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'ros2_vfh' build argument 'cmake_clean_first' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'ros2_vfh' build argument 'cmake_force_configure' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'ros2_vfh' build argument 'ament_cmake_args' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'ros2_vfh' build argument 'catkin_cmake_args' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'ros2_vfh' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.208s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_vfh' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zhihuili/RM_prac/build/ros2_vfh', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zhihuili/RM_prac/install/ros2_vfh', 'merge_install': False, 'path': '/home/zhihuili/RM_prac/src/ros2_vfh', 'symlink_install': False, 'test_result_base': None}
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'slam_pkg' build argument 'cmake_args' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'slam_pkg' build argument 'cmake_target' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'slam_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'slam_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'slam_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'slam_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'slam_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'slam_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'slam_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.208s] DEBUG:colcon.colcon_core.verb:Building package 'slam_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zhihuili/RM_prac/build/slam_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zhihuili/RM_prac/install/slam_pkg', 'merge_install': False, 'path': '/home/zhihuili/RM_prac/src/slam_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'transformations_pkg' build argument 'cmake_args' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'transformations_pkg' build argument 'cmake_target' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'transformations_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'transformations_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'transformations_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'transformations_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'transformations_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'transformations_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'transformations_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.208s] DEBUG:colcon.colcon_core.verb:Building package 'transformations_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zhihuili/RM_prac/build/transformations_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zhihuili/RM_prac/install/transformations_pkg', 'merge_install': False, 'path': '/home/zhihuili/RM_prac/src/transformations_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_coppeliasim' build argument 'cmake_args' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_coppeliasim' build argument 'cmake_target' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_coppeliasim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_coppeliasim' build argument 'cmake_clean_cache' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_coppeliasim' build argument 'cmake_clean_first' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_coppeliasim' build argument 'cmake_force_configure' from command line to 'False'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_coppeliasim' build argument 'ament_cmake_args' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_coppeliasim' build argument 'catkin_cmake_args' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_coppeliasim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.208s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot3_coppeliasim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zhihuili/RM_prac/build/turtlebot3_coppeliasim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim', 'merge_install': False, 'path': '/home/zhihuili/RM_prac/src/turtlebot3_coppeliasim', 'symlink_install': False, 'test_result_base': None}
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_msgs' build argument 'cmake_args' from command line to 'None'
+[0.208s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_msgs' build argument 'cmake_target' from command line to 'None'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.209s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot3_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zhihuili/RM_prac/build/turtlebot3_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zhihuili/RM_prac/install/turtlebot3_msgs', 'merge_install': False, 'path': '/home/zhihuili/RM_prac/src/turtlebot3_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'upv_maps_pkg' build argument 'cmake_args' from command line to 'None'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'upv_maps_pkg' build argument 'cmake_target' from command line to 'None'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'upv_maps_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'upv_maps_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'upv_maps_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'upv_maps_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'upv_maps_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'upv_maps_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'upv_maps_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.209s] DEBUG:colcon.colcon_core.verb:Building package 'upv_maps_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zhihuili/RM_prac/build/upv_maps_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zhihuili/RM_prac/install/upv_maps_pkg', 'merge_install': False, 'path': '/home/zhihuili/RM_prac/src/upv_maps_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'maintenance_mode_pkg' build argument 'cmake_args' from command line to 'None'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'maintenance_mode_pkg' build argument 'cmake_target' from command line to 'None'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'maintenance_mode_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'maintenance_mode_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'maintenance_mode_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'maintenance_mode_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'maintenance_mode_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'maintenance_mode_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'maintenance_mode_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.209s] DEBUG:colcon.colcon_core.verb:Building package 'maintenance_mode_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zhihuili/RM_prac/build/maintenance_mode_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zhihuili/RM_prac/install/maintenance_mode_pkg', 'merge_install': False, 'path': '/home/zhihuili/RM_prac/src/maintenance_mode_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_dqn' build argument 'cmake_args' from command line to 'None'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_dqn' build argument 'cmake_target' from command line to 'None'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_dqn' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_dqn' build argument 'cmake_clean_cache' from command line to 'False'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_dqn' build argument 'cmake_clean_first' from command line to 'False'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_dqn' build argument 'cmake_force_configure' from command line to 'False'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_dqn' build argument 'ament_cmake_args' from command line to 'None'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_dqn' build argument 'catkin_cmake_args' from command line to 'None'
+[0.209s] Level 5:colcon.colcon_core.verb:set package 'turtlebot3_dqn' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.209s] DEBUG:colcon.colcon_core.verb:Building package 'turtlebot3_dqn' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/zhihuili/RM_prac/build/turtlebot3_dqn', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/zhihuili/RM_prac/install/turtlebot3_dqn', 'merge_install': False, 'path': '/home/zhihuili/RM_prac/src/turtlebot3_dqn', 'symlink_install': False, 'test_result_base': None}
+[0.209s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.210s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.211s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zhihuili/RM_prac/src/turtlebot3_msgs' with build type 'ament_cmake'
+[0.211s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zhihuili/RM_prac/src/turtlebot3_msgs'
+[0.213s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.213s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.213s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.219s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zhihuili/RM_prac/src/bringup_turtlebot3_pkg' with build type 'ament_cmake'
+[0.219s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zhihuili/RM_prac/src/bringup_turtlebot3_pkg'
+[0.219s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.219s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.223s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zhihuili/RM_prac/src/intro_ros_pkg' with build type 'ament_cmake'
+[0.223s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zhihuili/RM_prac/src/intro_ros_pkg'
+[0.224s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.224s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.226s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zhihuili/RM_prac/src/kinematic_control_pkg' with build type 'ament_cmake'
+[0.227s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zhihuili/RM_prac/src/kinematic_control_pkg'
+[0.227s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.227s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.229s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zhihuili/RM_prac/src/navigation_pkg' with build type 'ament_cmake'
+[0.229s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zhihuili/RM_prac/src/navigation_pkg'
+[0.230s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.230s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.232s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zhihuili/RM_prac/src/pure_pursuit_pkg' with build type 'ament_cmake'
+[0.232s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zhihuili/RM_prac/src/pure_pursuit_pkg'
+[0.232s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.232s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.234s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zhihuili/RM_prac/src/ros2_vfh' with build type 'ament_cmake'
+[0.234s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zhihuili/RM_prac/src/ros2_vfh'
+[0.234s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.234s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.236s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zhihuili/RM_prac/src/slam_pkg' with build type 'ament_cmake'
+[0.236s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zhihuili/RM_prac/src/slam_pkg'
+[0.236s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.236s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.238s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zhihuili/RM_prac/src/transformations_pkg' with build type 'ament_cmake'
+[0.238s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zhihuili/RM_prac/src/transformations_pkg'
+[0.239s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.239s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.241s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zhihuili/RM_prac/src/turtlebot3_coppeliasim' with build type 'ament_cmake'
+[0.241s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zhihuili/RM_prac/src/turtlebot3_coppeliasim'
+[0.241s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.241s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.243s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zhihuili/RM_prac/src/upv_maps_pkg' with build type 'ament_cmake'
+[0.243s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zhihuili/RM_prac/src/upv_maps_pkg'
+[0.244s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.244s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.251s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/turtlebot3_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/turtlebot3_msgs -- -j14 -l14
+[0.256s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/bringup_turtlebot3_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/bringup_turtlebot3_pkg -- -j14 -l14
+[0.257s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/intro_ros_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/intro_ros_pkg -- -j14 -l14
+[0.258s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/kinematic_control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/kinematic_control_pkg -- -j14 -l14
+[0.261s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/navigation_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/navigation_pkg -- -j14 -l14
+[0.263s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/pure_pursuit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/pure_pursuit_pkg -- -j14 -l14
+[0.266s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/ros2_vfh': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/ros2_vfh -- -j14 -l14
+[0.269s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/slam_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/slam_pkg -- -j14 -l14
+[0.275s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/transformations_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/transformations_pkg -- -j14 -l14
+[0.281s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/turtlebot3_coppeliasim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/turtlebot3_coppeliasim -- -j14 -l14
+[0.346s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/upv_maps_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/upv_maps_pkg -- -j14 -l14
+[0.351s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/turtlebot3_coppeliasim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/turtlebot3_coppeliasim -- -j14 -l14
+[0.374s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/turtlebot3_coppeliasim': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/turtlebot3_coppeliasim
+[0.380s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/intro_ros_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/intro_ros_pkg -- -j14 -l14
+[0.381s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/intro_ros_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/intro_ros_pkg
+[0.387s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/navigation_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/navigation_pkg -- -j14 -l14
+[0.391s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/navigation_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/navigation_pkg
+[0.423s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/transformations_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/transformations_pkg -- -j14 -l14
+[0.423s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/transformations_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/transformations_pkg
+[0.423s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/slam_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/slam_pkg -- -j14 -l14
+[0.426s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/slam_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/slam_pkg
+[0.427s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/ros2_vfh' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/ros2_vfh -- -j14 -l14
+[0.427s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/ros2_vfh': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/ros2_vfh
+[0.428s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/bringup_turtlebot3_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/bringup_turtlebot3_pkg -- -j14 -l14
+[0.429s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/bringup_turtlebot3_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/bringup_turtlebot3_pkg
+[0.436s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/upv_maps_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/upv_maps_pkg -- -j14 -l14
+[0.438s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/upv_maps_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/upv_maps_pkg
+[0.439s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(intro_ros_pkg)
+[0.445s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/intro_ros_pkg' for CMake module files
+[0.446s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/intro_ros_pkg' for CMake config files
+[0.447s] Level 1:colcon.colcon_core.shell:create_environment_hook('intro_ros_pkg', 'cmake_prefix_path')
+[0.447s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/hook/cmake_prefix_path.ps1'
+[0.448s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/hook/cmake_prefix_path.dsv'
+[0.449s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/hook/cmake_prefix_path.sh'
+[0.449s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/intro_ros_pkg/lib'
+[0.450s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/intro_ros_pkg/bin'
+[0.450s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/intro_ros_pkg/lib/pkgconfig/intro_ros_pkg.pc'
+[0.450s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/intro_ros_pkg/lib/python3.10/site-packages'
+[0.450s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/intro_ros_pkg/bin'
+[0.451s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/package.ps1'
+[0.452s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/package.dsv'
+[0.453s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/package.sh'
+[0.454s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/package.bash'
+[0.455s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/intro_ros_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/intro_ros_pkg
+[0.458s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/package.zsh'
+[0.459s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/intro_ros_pkg/share/colcon-core/packages/intro_ros_pkg)
+[0.459s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(intro_ros_pkg)
+[0.460s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/intro_ros_pkg' for CMake module files
+[0.460s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/intro_ros_pkg' for CMake config files
+[0.461s] Level 1:colcon.colcon_core.shell:create_environment_hook('intro_ros_pkg', 'cmake_prefix_path')
+[0.461s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/hook/cmake_prefix_path.ps1'
+[0.461s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/hook/cmake_prefix_path.dsv'
+[0.462s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/hook/cmake_prefix_path.sh'
+[0.462s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/intro_ros_pkg/lib'
+[0.462s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/intro_ros_pkg/bin'
+[0.462s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/intro_ros_pkg/lib/pkgconfig/intro_ros_pkg.pc'
+[0.462s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/intro_ros_pkg/lib/python3.10/site-packages'
+[0.463s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/intro_ros_pkg/bin'
+[0.463s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/package.ps1'
+[0.465s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/package.dsv'
+[0.466s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/package.sh'
+[0.467s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/package.bash'
+[0.468s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/intro_ros_pkg/share/intro_ros_pkg/package.zsh'
+[0.469s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/intro_ros_pkg/share/colcon-core/packages/intro_ros_pkg)
+[0.469s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_coppeliasim)
+[0.469s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim' for CMake module files
+[0.470s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim' for CMake config files
+[0.470s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/turtlebot3_coppeliasim' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/turtlebot3_coppeliasim
+[0.471s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_coppeliasim', 'cmake_prefix_path')
+[0.472s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/hook/cmake_prefix_path.ps1'
+[0.474s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/hook/cmake_prefix_path.dsv'
+[0.475s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/hook/cmake_prefix_path.sh'
+[0.477s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/bin'
+[0.477s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/lib/pkgconfig/turtlebot3_coppeliasim.pc'
+[0.477s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/lib/python3.10/site-packages'
+[0.477s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/bin'
+[0.477s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/package.ps1'
+[0.478s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/package.dsv'
+[0.478s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/package.sh'
+[0.479s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/package.bash'
+[0.479s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/package.zsh'
+[0.479s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/colcon-core/packages/turtlebot3_coppeliasim)
+[0.480s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_coppeliasim)
+[0.480s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim' for CMake module files
+[0.480s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim' for CMake config files
+[0.481s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_coppeliasim', 'cmake_prefix_path')
+[0.481s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/hook/cmake_prefix_path.ps1'
+[0.481s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/hook/cmake_prefix_path.dsv'
+[0.481s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/hook/cmake_prefix_path.sh'
+[0.482s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/bin'
+[0.482s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/lib/pkgconfig/turtlebot3_coppeliasim.pc'
+[0.482s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/lib/python3.10/site-packages'
+[0.482s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/bin'
+[0.483s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/package.ps1'
+[0.483s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/package.dsv'
+[0.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/package.sh'
+[0.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/package.bash'
+[0.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/turtlebot3_coppeliasim/package.zsh'
+[0.484s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim/share/colcon-core/packages/turtlebot3_coppeliasim)
+[0.485s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(transformations_pkg)
+[0.485s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/transformations_pkg' for CMake module files
+[0.486s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/transformations_pkg' for CMake config files
+[0.486s] Level 1:colcon.colcon_core.shell:create_environment_hook('transformations_pkg', 'cmake_prefix_path')
+[0.486s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/transformations_pkg/share/transformations_pkg/hook/cmake_prefix_path.ps1'
+[0.486s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/transformations_pkg/share/transformations_pkg/hook/cmake_prefix_path.dsv'
+[0.485s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/transformations_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/transformations_pkg
+[0.487s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/transformations_pkg/share/transformations_pkg/hook/cmake_prefix_path.sh'
+[0.487s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/transformations_pkg/lib'
+[0.487s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/transformations_pkg/bin'
+[0.488s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/transformations_pkg/lib/pkgconfig/transformations_pkg.pc'
+[0.488s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/transformations_pkg/lib/python3.10/site-packages'
+[0.488s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/transformations_pkg/bin'
+[0.488s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/transformations_pkg/share/transformations_pkg/package.ps1'
+[0.489s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/transformations_pkg/share/transformations_pkg/package.dsv'
+[0.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/transformations_pkg/share/transformations_pkg/package.sh'
+[0.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/transformations_pkg/share/transformations_pkg/package.bash'
+[0.490s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/transformations_pkg/share/transformations_pkg/package.zsh'
+[0.490s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/transformations_pkg/share/colcon-core/packages/transformations_pkg)
+[0.491s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(transformations_pkg)
+[0.491s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/transformations_pkg' for CMake module files
+[0.491s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/transformations_pkg' for CMake config files
+[0.492s] Level 1:colcon.colcon_core.shell:create_environment_hook('transformations_pkg', 'cmake_prefix_path')
+[0.492s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/transformations_pkg/share/transformations_pkg/hook/cmake_prefix_path.ps1'
+[0.492s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/transformations_pkg/share/transformations_pkg/hook/cmake_prefix_path.dsv'
+[0.492s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/transformations_pkg/share/transformations_pkg/hook/cmake_prefix_path.sh'
+[0.493s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/transformations_pkg/lib'
+[0.493s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/transformations_pkg/bin'
+[0.493s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/transformations_pkg/lib/pkgconfig/transformations_pkg.pc'
+[0.493s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/transformations_pkg/lib/python3.10/site-packages'
+[0.493s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/transformations_pkg/bin'
+[0.493s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/transformations_pkg/share/transformations_pkg/package.ps1'
+[0.494s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/transformations_pkg/share/transformations_pkg/package.dsv'
+[0.494s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/transformations_pkg/share/transformations_pkg/package.sh'
+[0.494s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/transformations_pkg/share/transformations_pkg/package.bash'
+[0.495s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/transformations_pkg/share/transformations_pkg/package.zsh'
+[0.495s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/transformations_pkg/share/colcon-core/packages/transformations_pkg)
+[0.495s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(slam_pkg)
+[0.496s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/slam_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/slam_pkg
+[0.496s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/slam_pkg' for CMake module files
+[0.496s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/slam_pkg' for CMake config files
+[0.497s] Level 1:colcon.colcon_core.shell:create_environment_hook('slam_pkg', 'cmake_prefix_path')
+[0.497s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/slam_pkg/share/slam_pkg/hook/cmake_prefix_path.ps1'
+[0.497s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/slam_pkg/share/slam_pkg/hook/cmake_prefix_path.dsv'
+[0.497s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/slam_pkg/share/slam_pkg/hook/cmake_prefix_path.sh'
+[0.498s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/slam_pkg/lib'
+[0.498s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/slam_pkg/bin'
+[0.498s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/slam_pkg/lib/pkgconfig/slam_pkg.pc'
+[0.498s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/slam_pkg/lib/python3.10/site-packages'
+[0.498s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/slam_pkg/bin'
+[0.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/slam_pkg/share/slam_pkg/package.ps1'
+[0.499s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/slam_pkg/share/slam_pkg/package.dsv'
+[0.500s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/slam_pkg/share/slam_pkg/package.sh'
+[0.500s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/slam_pkg/share/slam_pkg/package.bash'
+[0.500s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/slam_pkg/share/slam_pkg/package.zsh'
+[0.500s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/slam_pkg/share/colcon-core/packages/slam_pkg)
+[0.500s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(slam_pkg)
+[0.501s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/slam_pkg' for CMake module files
+[0.501s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/slam_pkg' for CMake config files
+[0.501s] Level 1:colcon.colcon_core.shell:create_environment_hook('slam_pkg', 'cmake_prefix_path')
+[0.501s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/slam_pkg/share/slam_pkg/hook/cmake_prefix_path.ps1'
+[0.501s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/slam_pkg/share/slam_pkg/hook/cmake_prefix_path.dsv'
+[0.502s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/slam_pkg/share/slam_pkg/hook/cmake_prefix_path.sh'
+[0.502s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/slam_pkg/lib'
+[0.502s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/slam_pkg/bin'
+[0.502s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/slam_pkg/lib/pkgconfig/slam_pkg.pc'
+[0.502s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/slam_pkg/lib/python3.10/site-packages'
+[0.502s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/slam_pkg/bin'
+[0.503s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/slam_pkg/share/slam_pkg/package.ps1'
+[0.503s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/slam_pkg/share/slam_pkg/package.dsv'
+[0.503s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/slam_pkg/share/slam_pkg/package.sh'
+[0.503s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/slam_pkg/share/slam_pkg/package.bash'
+[0.503s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/slam_pkg/share/slam_pkg/package.zsh'
+[0.504s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/slam_pkg/share/colcon-core/packages/slam_pkg)
+[0.504s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(navigation_pkg)
+[0.504s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/navigation_pkg' for CMake module files
+[0.505s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/navigation_pkg' for CMake config files
+[0.505s] Level 1:colcon.colcon_core.shell:create_environment_hook('navigation_pkg', 'cmake_prefix_path')
+[0.505s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/hook/cmake_prefix_path.ps1'
+[0.506s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/navigation_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/navigation_pkg
+[0.506s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/hook/cmake_prefix_path.dsv'
+[0.506s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/hook/cmake_prefix_path.sh'
+[0.507s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/navigation_pkg/bin'
+[0.507s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/navigation_pkg/lib/pkgconfig/navigation_pkg.pc'
+[0.508s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/navigation_pkg/lib/python3.10/site-packages'
+[0.508s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/navigation_pkg/bin'
+[0.508s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/package.ps1'
+[0.509s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/package.dsv'
+[0.509s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/package.sh'
+[0.510s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/package.bash'
+[0.510s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/package.zsh'
+[0.510s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/navigation_pkg/share/colcon-core/packages/navigation_pkg)
+[0.511s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(navigation_pkg)
+[0.511s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/navigation_pkg' for CMake module files
+[0.511s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/navigation_pkg' for CMake config files
+[0.512s] Level 1:colcon.colcon_core.shell:create_environment_hook('navigation_pkg', 'cmake_prefix_path')
+[0.512s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/hook/cmake_prefix_path.ps1'
+[0.512s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/hook/cmake_prefix_path.dsv'
+[0.513s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/hook/cmake_prefix_path.sh'
+[0.513s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/navigation_pkg/bin'
+[0.513s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/navigation_pkg/lib/pkgconfig/navigation_pkg.pc'
+[0.514s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/navigation_pkg/lib/python3.10/site-packages'
+[0.514s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/navigation_pkg/bin'
+[0.514s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/package.ps1'
+[0.515s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/package.dsv'
+[0.515s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/package.sh'
+[0.516s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/package.bash'
+[0.516s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/navigation_pkg/share/navigation_pkg/package.zsh'
+[0.516s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/navigation_pkg/share/colcon-core/packages/navigation_pkg)
+[0.517s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_vfh)
+[0.517s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/ros2_vfh' for CMake module files
+[0.518s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/ros2_vfh' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/ros2_vfh
+[0.518s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/ros2_vfh' for CMake config files
+[0.518s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_vfh', 'cmake_prefix_path')
+[0.518s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/ros2_vfh/share/ros2_vfh/hook/cmake_prefix_path.ps1'
+[0.519s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/ros2_vfh/share/ros2_vfh/hook/cmake_prefix_path.dsv'
+[0.519s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/ros2_vfh/share/ros2_vfh/hook/cmake_prefix_path.sh'
+[0.520s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/ros2_vfh/lib'
+[0.520s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/ros2_vfh/bin'
+[0.520s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/ros2_vfh/lib/pkgconfig/ros2_vfh.pc'
+[0.520s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/ros2_vfh/lib/python3.10/site-packages'
+[0.520s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/ros2_vfh/bin'
+[0.520s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/ros2_vfh/share/ros2_vfh/package.ps1'
+[0.521s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/ros2_vfh/share/ros2_vfh/package.dsv'
+[0.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/ros2_vfh/share/ros2_vfh/package.sh'
+[0.521s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/ros2_vfh/share/ros2_vfh/package.bash'
+[0.522s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/ros2_vfh/share/ros2_vfh/package.zsh'
+[0.522s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/ros2_vfh/share/colcon-core/packages/ros2_vfh)
+[0.522s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_vfh)
+[0.523s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/ros2_vfh' for CMake module files
+[0.523s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/ros2_vfh' for CMake config files
+[0.524s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_vfh', 'cmake_prefix_path')
+[0.524s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/ros2_vfh/share/ros2_vfh/hook/cmake_prefix_path.ps1'
+[0.524s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/ros2_vfh/share/ros2_vfh/hook/cmake_prefix_path.dsv'
+[0.525s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/ros2_vfh/share/ros2_vfh/hook/cmake_prefix_path.sh'
+[0.525s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/ros2_vfh/lib'
+[0.525s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/ros2_vfh/bin'
+[0.525s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/ros2_vfh/lib/pkgconfig/ros2_vfh.pc'
+[0.525s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/ros2_vfh/lib/python3.10/site-packages'
+[0.525s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/ros2_vfh/bin'
+[0.526s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/ros2_vfh/share/ros2_vfh/package.ps1'
+[0.526s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/ros2_vfh/share/ros2_vfh/package.dsv'
+[0.526s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/ros2_vfh/share/ros2_vfh/package.sh'
+[0.527s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/ros2_vfh/share/ros2_vfh/package.bash'
+[0.527s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/ros2_vfh/share/ros2_vfh/package.zsh'
+[0.527s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/ros2_vfh/share/colcon-core/packages/ros2_vfh)
+[0.528s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bringup_turtlebot3_pkg)
+[0.529s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg' for CMake module files
+[0.529s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/bringup_turtlebot3_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/bringup_turtlebot3_pkg
+[0.530s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg' for CMake config files
+[0.530s] Level 1:colcon.colcon_core.shell:create_environment_hook('bringup_turtlebot3_pkg', 'cmake_prefix_path')
+[0.531s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/hook/cmake_prefix_path.ps1'
+[0.531s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/hook/cmake_prefix_path.dsv'
+[0.531s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/hook/cmake_prefix_path.sh'
+[0.532s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/lib'
+[0.532s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/bin'
+[0.532s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/lib/pkgconfig/bringup_turtlebot3_pkg.pc'
+[0.532s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/lib/python3.10/site-packages'
+[0.532s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/bin'
+[0.532s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/package.ps1'
+[0.533s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/package.dsv'
+[0.533s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/package.sh'
+[0.533s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/package.bash'
+[0.534s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/package.zsh'
+[0.534s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/colcon-core/packages/bringup_turtlebot3_pkg)
+[0.534s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(bringup_turtlebot3_pkg)
+[0.534s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg' for CMake module files
+[0.535s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg' for CMake config files
+[0.535s] Level 1:colcon.colcon_core.shell:create_environment_hook('bringup_turtlebot3_pkg', 'cmake_prefix_path')
+[0.535s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/hook/cmake_prefix_path.ps1'
+[0.535s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/hook/cmake_prefix_path.dsv'
+[0.535s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/hook/cmake_prefix_path.sh'
+[0.536s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/lib'
+[0.536s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/bin'
+[0.536s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/lib/pkgconfig/bringup_turtlebot3_pkg.pc'
+[0.536s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/lib/python3.10/site-packages'
+[0.536s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/bin'
+[0.536s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/package.ps1'
+[0.537s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/package.dsv'
+[0.537s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/package.sh'
+[0.538s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/package.bash'
+[0.538s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/bringup_turtlebot3_pkg/package.zsh'
+[0.538s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg/share/colcon-core/packages/bringup_turtlebot3_pkg)
+[0.539s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(upv_maps_pkg)
+[0.539s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/upv_maps_pkg' for CMake module files
+[0.539s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/upv_maps_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/upv_maps_pkg
+[0.540s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/upv_maps_pkg' for CMake config files
+[0.540s] Level 1:colcon.colcon_core.shell:create_environment_hook('upv_maps_pkg', 'cmake_prefix_path')
+[0.540s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/upv_maps_pkg/share/upv_maps_pkg/hook/cmake_prefix_path.ps1'
+[0.541s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/upv_maps_pkg/share/upv_maps_pkg/hook/cmake_prefix_path.dsv'
+[0.541s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/upv_maps_pkg/share/upv_maps_pkg/hook/cmake_prefix_path.sh'
+[0.541s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/upv_maps_pkg/bin'
+[0.541s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/upv_maps_pkg/lib/pkgconfig/upv_maps_pkg.pc'
+[0.541s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/upv_maps_pkg/lib/python3.10/site-packages'
+[0.542s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/upv_maps_pkg/bin'
+[0.542s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/upv_maps_pkg/share/upv_maps_pkg/package.ps1'
+[0.542s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/upv_maps_pkg/share/upv_maps_pkg/package.dsv'
+[0.543s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/upv_maps_pkg/share/upv_maps_pkg/package.sh'
+[0.543s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/upv_maps_pkg/share/upv_maps_pkg/package.bash'
+[0.543s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/upv_maps_pkg/share/upv_maps_pkg/package.zsh'
+[0.543s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/upv_maps_pkg/share/colcon-core/packages/upv_maps_pkg)
+[0.544s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(upv_maps_pkg)
+[0.544s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/upv_maps_pkg' for CMake module files
+[0.544s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/upv_maps_pkg' for CMake config files
+[0.545s] Level 1:colcon.colcon_core.shell:create_environment_hook('upv_maps_pkg', 'cmake_prefix_path')
+[0.545s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/upv_maps_pkg/share/upv_maps_pkg/hook/cmake_prefix_path.ps1'
+[0.545s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/upv_maps_pkg/share/upv_maps_pkg/hook/cmake_prefix_path.dsv'
+[0.545s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/upv_maps_pkg/share/upv_maps_pkg/hook/cmake_prefix_path.sh'
+[0.546s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/upv_maps_pkg/bin'
+[0.546s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/upv_maps_pkg/lib/pkgconfig/upv_maps_pkg.pc'
+[0.546s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/upv_maps_pkg/lib/python3.10/site-packages'
+[0.546s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/upv_maps_pkg/bin'
+[0.547s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/upv_maps_pkg/share/upv_maps_pkg/package.ps1'
+[0.548s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/upv_maps_pkg/share/upv_maps_pkg/package.dsv'
+[0.549s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/upv_maps_pkg/share/upv_maps_pkg/package.sh'
+[0.549s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/upv_maps_pkg/share/upv_maps_pkg/package.bash'
+[0.549s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/upv_maps_pkg/share/upv_maps_pkg/package.zsh'
+[0.550s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/upv_maps_pkg/share/colcon-core/packages/upv_maps_pkg)
+[0.551s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/turtlebot3_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/turtlebot3_msgs -- -j14 -l14
+[0.553s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/turtlebot3_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/turtlebot3_msgs
+[0.580s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/pure_pursuit_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/pure_pursuit_pkg -- -j14 -l14
+[0.581s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/pure_pursuit_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/pure_pursuit_pkg
+[0.598s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/kinematic_control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --build /home/zhihuili/RM_prac/build/kinematic_control_pkg -- -j14 -l14
+[0.599s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/kinematic_control_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/kinematic_control_pkg
+[0.628s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_msgs)
+[0.629s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_msgs' for CMake module files
+[0.629s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/turtlebot3_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/turtlebot3_msgs
+[0.630s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_msgs' for CMake config files
+[0.631s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_msgs', 'cmake_prefix_path')
+[0.631s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/hook/cmake_prefix_path.ps1'
+[0.632s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/hook/cmake_prefix_path.dsv'
+[0.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/hook/cmake_prefix_path.sh'
+[0.633s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_msgs/lib'
+[0.633s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_msgs', 'ld_library_path_lib')
+[0.633s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/hook/ld_library_path_lib.ps1'
+[0.634s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/hook/ld_library_path_lib.dsv'
+[0.634s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/hook/ld_library_path_lib.sh'
+[0.634s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_msgs/bin'
+[0.634s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_msgs/lib/pkgconfig/turtlebot3_msgs.pc'
+[0.635s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_msgs/lib/python3.10/site-packages'
+[0.635s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_msgs/bin'
+[0.635s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/package.ps1'
+[0.636s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/package.dsv'
+[0.636s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/package.sh'
+[0.637s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/package.bash'
+[0.637s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/package.zsh'
+[0.637s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/colcon-core/packages/turtlebot3_msgs)
+[0.638s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_msgs)
+[0.638s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_msgs' for CMake module files
+[0.640s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_msgs' for CMake config files
+[0.642s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_msgs', 'cmake_prefix_path')
+[0.642s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/hook/cmake_prefix_path.ps1'
+[0.642s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/hook/cmake_prefix_path.dsv'
+[0.643s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/hook/cmake_prefix_path.sh'
+[0.643s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_msgs/lib'
+[0.643s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_msgs', 'ld_library_path_lib')
+[0.643s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/hook/ld_library_path_lib.ps1'
+[0.644s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/hook/ld_library_path_lib.dsv'
+[0.644s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/hook/ld_library_path_lib.sh'
+[0.644s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_msgs/bin'
+[0.644s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_msgs/lib/pkgconfig/turtlebot3_msgs.pc'
+[0.644s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_msgs/lib/python3.10/site-packages'
+[0.644s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_msgs/bin'
+[0.645s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/package.ps1'
+[0.645s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/package.dsv'
+[0.645s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/package.sh'
+[0.645s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/package.bash'
+[0.646s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/turtlebot3_msgs/package.zsh'
+[0.646s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/turtlebot3_msgs/share/colcon-core/packages/turtlebot3_msgs)
+[0.647s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/zhihuili/RM_prac/src/maintenance_mode_pkg' with build type 'ament_cmake'
+[0.647s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/zhihuili/RM_prac/src/maintenance_mode_pkg'
+[0.647s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.647s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.650s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/zhihuili/RM_prac/src/turtlebot3_dqn' with build type 'ament_python'
+[0.650s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_dqn', 'ament_prefix_path')
+[0.650s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/hook/ament_prefix_path.ps1'
+[0.651s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/hook/ament_prefix_path.dsv'
+[0.651s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/hook/ament_prefix_path.sh'
+[0.652s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.652s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.656s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pure_pursuit_pkg)
+[0.656s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/pure_pursuit_pkg' for CMake module files
+[0.657s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/pure_pursuit_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/pure_pursuit_pkg
+[0.657s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/pure_pursuit_pkg' for CMake config files
+[0.657s] Level 1:colcon.colcon_core.shell:create_environment_hook('pure_pursuit_pkg', 'cmake_prefix_path')
+[0.658s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/hook/cmake_prefix_path.ps1'
+[0.658s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/hook/cmake_prefix_path.dsv'
+[0.658s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/hook/cmake_prefix_path.sh'
+[0.658s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib'
+[0.658s] Level 1:colcon.colcon_core.shell:create_environment_hook('pure_pursuit_pkg', 'ld_library_path_lib')
+[0.659s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/hook/ld_library_path_lib.ps1'
+[0.659s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/hook/ld_library_path_lib.dsv'
+[0.659s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/hook/ld_library_path_lib.sh'
+[0.659s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/bin'
+[0.659s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib/pkgconfig/pure_pursuit_pkg.pc'
+[0.659s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib/python3.10/site-packages'
+[0.660s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/bin'
+[0.660s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/package.ps1'
+[0.660s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/package.dsv'
+[0.660s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/package.sh'
+[0.661s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/package.bash'
+[0.661s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/package.zsh'
+[0.661s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/colcon-core/packages/pure_pursuit_pkg)
+[0.661s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pure_pursuit_pkg)
+[0.661s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/pure_pursuit_pkg' for CMake module files
+[0.662s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/pure_pursuit_pkg' for CMake config files
+[0.662s] Level 1:colcon.colcon_core.shell:create_environment_hook('pure_pursuit_pkg', 'cmake_prefix_path')
+[0.662s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/hook/cmake_prefix_path.ps1'
+[0.662s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/hook/cmake_prefix_path.dsv'
+[0.662s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/hook/cmake_prefix_path.sh'
+[0.663s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib'
+[0.663s] Level 1:colcon.colcon_core.shell:create_environment_hook('pure_pursuit_pkg', 'ld_library_path_lib')
+[0.663s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/hook/ld_library_path_lib.ps1'
+[0.663s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/hook/ld_library_path_lib.dsv'
+[0.663s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/hook/ld_library_path_lib.sh'
+[0.663s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/bin'
+[0.663s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib/pkgconfig/pure_pursuit_pkg.pc'
+[0.663s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib/python3.10/site-packages'
+[0.663s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/bin'
+[0.664s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/package.ps1'
+[0.664s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/package.dsv'
+[0.664s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/package.sh'
+[0.664s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/package.bash'
+[0.664s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/pure_pursuit_pkg/package.zsh'
+[0.665s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/pure_pursuit_pkg/share/colcon-core/packages/pure_pursuit_pkg)
+[0.665s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(kinematic_control_pkg)
+[0.666s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/kinematic_control_pkg' for CMake module files
+[0.667s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/kinematic_control_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble /usr/bin/cmake --install /home/zhihuili/RM_prac/build/kinematic_control_pkg
+[0.667s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/kinematic_control_pkg' for CMake config files
+[0.668s] Level 1:colcon.colcon_core.shell:create_environment_hook('kinematic_control_pkg', 'cmake_prefix_path')
+[0.668s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/hook/cmake_prefix_path.ps1'
+[0.668s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/hook/cmake_prefix_path.dsv'
+[0.669s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/hook/cmake_prefix_path.sh'
+[0.669s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/kinematic_control_pkg/lib'
+[0.669s] Level 1:colcon.colcon_core.shell:create_environment_hook('kinematic_control_pkg', 'ld_library_path_lib')
+[0.669s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/hook/ld_library_path_lib.ps1'
+[0.669s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/hook/ld_library_path_lib.dsv'
+[0.669s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/hook/ld_library_path_lib.sh'
+[0.670s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/kinematic_control_pkg/bin'
+[0.670s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/kinematic_control_pkg/lib/pkgconfig/kinematic_control_pkg.pc'
+[0.670s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/kinematic_control_pkg/lib/python3.10/site-packages'
+[0.670s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/kinematic_control_pkg/bin'
+[0.670s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/package.ps1'
+[0.671s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/package.dsv'
+[0.671s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/package.sh'
+[0.671s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/package.bash'
+[0.671s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/package.zsh'
+[0.671s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/colcon-core/packages/kinematic_control_pkg)
+[0.672s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(kinematic_control_pkg)
+[0.672s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/kinematic_control_pkg' for CMake module files
+[0.672s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/kinematic_control_pkg' for CMake config files
+[0.672s] Level 1:colcon.colcon_core.shell:create_environment_hook('kinematic_control_pkg', 'cmake_prefix_path')
+[0.672s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/hook/cmake_prefix_path.ps1'
+[0.673s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/hook/cmake_prefix_path.dsv'
+[0.673s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/hook/cmake_prefix_path.sh'
+[0.673s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/kinematic_control_pkg/lib'
+[0.673s] Level 1:colcon.colcon_core.shell:create_environment_hook('kinematic_control_pkg', 'ld_library_path_lib')
+[0.673s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/hook/ld_library_path_lib.ps1'
+[0.674s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/hook/ld_library_path_lib.dsv'
+[0.674s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/hook/ld_library_path_lib.sh'
+[0.674s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/kinematic_control_pkg/bin'
+[0.674s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/kinematic_control_pkg/lib/pkgconfig/kinematic_control_pkg.pc'
+[0.674s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/kinematic_control_pkg/lib/python3.10/site-packages'
+[0.674s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/kinematic_control_pkg/bin'
+[0.674s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/package.ps1'
+[0.675s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/package.dsv'
+[0.675s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/package.sh'
+[0.675s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/package.bash'
+[0.675s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/kinematic_control_pkg/package.zsh'
+[0.675s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/kinematic_control_pkg/share/colcon-core/packages/kinematic_control_pkg)
+[0.681s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/maintenance_mode_pkg': CMAKE_PREFIX_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs:/home/zhihuili/RM_prac/install/upv_maps_pkg:/home/zhihuili/RM_prac/install/maintenance_mode_pkg:/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim:/home/zhihuili/RM_prac/install/transformations_pkg:/home/zhihuili/RM_prac/install/slam_pkg:/home/zhihuili/RM_prac/install/ros2_vfh:/home/zhihuili/RM_prac/install/pure_pursuit_pkg:/home/zhihuili/RM_prac/install/navigation_pkg:/home/zhihuili/RM_prac/install/kinematic_control_pkg:/home/zhihuili/RM_prac/install/intro_ros_pkg:/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble LD_LIBRARY_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs/lib:/home/zhihuili/sumo_env/lib:/home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib:/home/zhihuili/RM_prac/install/kinematic_control_pkg/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/zhihuili/RM_prac/build/maintenance_mode_pkg -- -j14 -l14
+[0.815s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/zhihuili/RM_prac/src/turtlebot3_dqn'
+[0.816s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.816s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.821s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/maintenance_mode_pkg' returned '0': CMAKE_PREFIX_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs:/home/zhihuili/RM_prac/install/upv_maps_pkg:/home/zhihuili/RM_prac/install/maintenance_mode_pkg:/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim:/home/zhihuili/RM_prac/install/transformations_pkg:/home/zhihuili/RM_prac/install/slam_pkg:/home/zhihuili/RM_prac/install/ros2_vfh:/home/zhihuili/RM_prac/install/pure_pursuit_pkg:/home/zhihuili/RM_prac/install/navigation_pkg:/home/zhihuili/RM_prac/install/kinematic_control_pkg:/home/zhihuili/RM_prac/install/intro_ros_pkg:/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble LD_LIBRARY_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs/lib:/home/zhihuili/sumo_env/lib:/home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib:/home/zhihuili/RM_prac/install/kinematic_control_pkg/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/zhihuili/RM_prac/build/maintenance_mode_pkg -- -j14 -l14
+[0.826s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/build/maintenance_mode_pkg': CMAKE_PREFIX_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs:/home/zhihuili/RM_prac/install/upv_maps_pkg:/home/zhihuili/RM_prac/install/maintenance_mode_pkg:/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim:/home/zhihuili/RM_prac/install/transformations_pkg:/home/zhihuili/RM_prac/install/slam_pkg:/home/zhihuili/RM_prac/install/ros2_vfh:/home/zhihuili/RM_prac/install/pure_pursuit_pkg:/home/zhihuili/RM_prac/install/navigation_pkg:/home/zhihuili/RM_prac/install/kinematic_control_pkg:/home/zhihuili/RM_prac/install/intro_ros_pkg:/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble LD_LIBRARY_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs/lib:/home/zhihuili/sumo_env/lib:/home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib:/home/zhihuili/RM_prac/install/kinematic_control_pkg/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/zhihuili/RM_prac/build/maintenance_mode_pkg
+[0.864s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(maintenance_mode_pkg)
+[0.865s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/maintenance_mode_pkg' for CMake module files
+[0.865s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/build/maintenance_mode_pkg' returned '0': CMAKE_PREFIX_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs:/home/zhihuili/RM_prac/install/upv_maps_pkg:/home/zhihuili/RM_prac/install/maintenance_mode_pkg:/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim:/home/zhihuili/RM_prac/install/transformations_pkg:/home/zhihuili/RM_prac/install/slam_pkg:/home/zhihuili/RM_prac/install/ros2_vfh:/home/zhihuili/RM_prac/install/pure_pursuit_pkg:/home/zhihuili/RM_prac/install/navigation_pkg:/home/zhihuili/RM_prac/install/kinematic_control_pkg:/home/zhihuili/RM_prac/install/intro_ros_pkg:/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg:/home/zhihuili/RM_prac/install/turtlebot3_dqn:/opt/ros/humble LD_LIBRARY_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs/lib:/home/zhihuili/sumo_env/lib:/home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib:/home/zhihuili/RM_prac/install/kinematic_control_pkg/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/zhihuili/RM_prac/build/maintenance_mode_pkg
+[0.866s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/maintenance_mode_pkg' for CMake config files
+[0.867s] Level 1:colcon.colcon_core.shell:create_environment_hook('maintenance_mode_pkg', 'cmake_prefix_path')
+[0.867s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/share/maintenance_mode_pkg/hook/cmake_prefix_path.ps1'
+[0.868s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/share/maintenance_mode_pkg/hook/cmake_prefix_path.dsv'
+[0.869s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/share/maintenance_mode_pkg/hook/cmake_prefix_path.sh'
+[0.870s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/lib'
+[0.871s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/bin'
+[0.871s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/lib/pkgconfig/maintenance_mode_pkg.pc'
+[0.871s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/lib/python3.10/site-packages'
+[0.872s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/bin'
+[0.873s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/share/maintenance_mode_pkg/package.ps1'
+[0.875s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/share/maintenance_mode_pkg/package.dsv'
+[0.876s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/share/maintenance_mode_pkg/package.sh'
+[0.877s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/share/maintenance_mode_pkg/package.bash'
+[0.877s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/share/maintenance_mode_pkg/package.zsh'
+[0.878s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/maintenance_mode_pkg/share/colcon-core/packages/maintenance_mode_pkg)
+[0.879s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(maintenance_mode_pkg)
+[0.879s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/maintenance_mode_pkg' for CMake module files
+[0.880s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/maintenance_mode_pkg' for CMake config files
+[0.881s] Level 1:colcon.colcon_core.shell:create_environment_hook('maintenance_mode_pkg', 'cmake_prefix_path')
+[0.881s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/share/maintenance_mode_pkg/hook/cmake_prefix_path.ps1'
+[0.882s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/share/maintenance_mode_pkg/hook/cmake_prefix_path.dsv'
+[0.883s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/share/maintenance_mode_pkg/hook/cmake_prefix_path.sh'
+[0.884s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/lib'
+[0.884s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/bin'
+[0.884s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/lib/pkgconfig/maintenance_mode_pkg.pc'
+[0.884s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/lib/python3.10/site-packages'
+[0.885s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/bin'
+[0.886s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/share/maintenance_mode_pkg/package.ps1'
+[0.887s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/share/maintenance_mode_pkg/package.dsv'
+[0.887s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/share/maintenance_mode_pkg/package.sh'
+[0.888s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/share/maintenance_mode_pkg/package.bash'
+[0.888s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/maintenance_mode_pkg/share/maintenance_mode_pkg/package.zsh'
+[0.889s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/maintenance_mode_pkg/share/colcon-core/packages/maintenance_mode_pkg)
+[1.048s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/zhihuili/RM_prac/src/turtlebot3_dqn': CMAKE_PREFIX_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs:/home/zhihuili/RM_prac/install/upv_maps_pkg:/home/zhihuili/RM_prac/install/maintenance_mode_pkg:/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim:/home/zhihuili/RM_prac/install/transformations_pkg:/home/zhihuili/RM_prac/install/slam_pkg:/home/zhihuili/RM_prac/install/ros2_vfh:/home/zhihuili/RM_prac/install/pure_pursuit_pkg:/home/zhihuili/RM_prac/install/navigation_pkg:/home/zhihuili/RM_prac/install/kinematic_control_pkg:/home/zhihuili/RM_prac/install/intro_ros_pkg:/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg LD_LIBRARY_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs/lib:/home/zhihuili/sumo_env/lib:/home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib:/home/zhihuili/RM_prac/install/kinematic_control_pkg/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/zhihuili/RM_prac/build/turtlebot3_dqn/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_dqn build --build-base /home/zhihuili/RM_prac/build/turtlebot3_dqn/build install --record /home/zhihuili/RM_prac/build/turtlebot3_dqn/install.log --single-version-externally-managed install_data
+[1.236s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_dqn' for CMake module files
+[1.237s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_dqn' for CMake config files
+[1.237s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/zhihuili/RM_prac/src/turtlebot3_dqn' returned '0': CMAKE_PREFIX_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs:/home/zhihuili/RM_prac/install/upv_maps_pkg:/home/zhihuili/RM_prac/install/maintenance_mode_pkg:/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim:/home/zhihuili/RM_prac/install/transformations_pkg:/home/zhihuili/RM_prac/install/slam_pkg:/home/zhihuili/RM_prac/install/ros2_vfh:/home/zhihuili/RM_prac/install/pure_pursuit_pkg:/home/zhihuili/RM_prac/install/navigation_pkg:/home/zhihuili/RM_prac/install/kinematic_control_pkg:/home/zhihuili/RM_prac/install/intro_ros_pkg:/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg LD_LIBRARY_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs/lib:/home/zhihuili/sumo_env/lib:/home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib:/home/zhihuili/RM_prac/install/kinematic_control_pkg/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/zhihuili/RM_prac/build/turtlebot3_dqn/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_dqn build --build-base /home/zhihuili/RM_prac/build/turtlebot3_dqn/build install --record /home/zhihuili/RM_prac/build/turtlebot3_dqn/install.log --single-version-externally-managed install_data
+[1.238s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_dqn/lib'
+[1.238s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_dqn/bin'
+[1.238s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/pkgconfig/turtlebot3_dqn.pc'
+[1.238s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages'
+[1.238s] Level 1:colcon.colcon_core.shell:create_environment_hook('turtlebot3_dqn', 'pythonpath')
+[1.238s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/hook/pythonpath.ps1'
+[1.239s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/hook/pythonpath.dsv'
+[1.239s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/hook/pythonpath.sh'
+[1.240s] Level 1:colcon.colcon_core.environment:checking '/home/zhihuili/RM_prac/install/turtlebot3_dqn/bin'
+[1.240s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(turtlebot3_dqn)
+[1.240s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/package.ps1'
+[1.240s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/package.dsv'
+[1.241s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/package.sh'
+[1.241s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/package.bash'
+[1.241s] INFO:colcon.colcon_core.shell:Creating package script '/home/zhihuili/RM_prac/install/turtlebot3_dqn/share/turtlebot3_dqn/package.zsh'
+[1.241s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/zhihuili/RM_prac/install/turtlebot3_dqn/share/colcon-core/packages/turtlebot3_dqn)
+[1.242s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.242s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.242s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[1.242s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.249s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[1.250s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.250s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.250s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.265s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.266s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zhihuili/RM_prac/install/local_setup.ps1'
+[1.267s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/zhihuili/RM_prac/install/_local_setup_util_ps1.py'
+[1.268s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zhihuili/RM_prac/install/setup.ps1'
+[1.269s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zhihuili/RM_prac/install/local_setup.sh'
+[1.270s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/zhihuili/RM_prac/install/_local_setup_util_sh.py'
+[1.270s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zhihuili/RM_prac/install/setup.sh'
+[1.271s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zhihuili/RM_prac/install/local_setup.bash'
+[1.271s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zhihuili/RM_prac/install/setup.bash'
+[1.272s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/zhihuili/RM_prac/install/local_setup.zsh'
+[1.272s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/zhihuili/RM_prac/install/setup.zsh'

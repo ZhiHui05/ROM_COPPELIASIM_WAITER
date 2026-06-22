@@ -1,0 +1,36 @@
+[0.684s] Invoking command in '/home/zhihuili/RM_prac/src/turtlebot3_dqn': CMAKE_PREFIX_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs:/home/zhihuili/RM_prac/install/upv_maps_pkg:/home/zhihuili/RM_prac/install/maintenance_mode_pkg:/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim:/home/zhihuili/RM_prac/install/transformations_pkg:/home/zhihuili/RM_prac/install/slam_pkg:/home/zhihuili/RM_prac/install/ros2_vfh:/home/zhihuili/RM_prac/install/pure_pursuit_pkg:/home/zhihuili/RM_prac/install/navigation_pkg:/home/zhihuili/RM_prac/install/kinematic_control_pkg:/home/zhihuili/RM_prac/install/intro_ros_pkg:/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg LD_LIBRARY_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs/lib:/home/zhihuili/sumo_env/lib:/home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib:/home/zhihuili/RM_prac/install/kinematic_control_pkg/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/zhihuili/RM_prac/build/turtlebot3_dqn/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_dqn build --build-base /home/zhihuili/RM_prac/build/turtlebot3_dqn/build install --record /home/zhihuili/RM_prac/build/turtlebot3_dqn/install.log --single-version-externally-managed install_data
+[0.958s] running egg_info
+[0.958s] writing ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/PKG-INFO
+[0.958s] writing dependency_links to ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/dependency_links.txt
+[0.959s] writing entry points to ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/entry_points.txt
+[0.959s] writing requirements to ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/requires.txt
+[0.959s] writing top-level names to ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/top_level.txt
+[0.961s] reading manifest file '../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/SOURCES.txt'
+[0.961s] writing manifest file '../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info/SOURCES.txt'
+[0.961s] running build
+[0.962s] running build_py
+[0.962s] copying turtlebot3_dqn/dqn_agent.py -> /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn
+[0.962s] copying turtlebot3_dqn/dqn_test.py -> /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn
+[0.962s] copying turtlebot3_dqn/dqn_environment.py -> /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn
+[0.963s] running install
+[0.963s] running install_lib
+[0.964s] copying /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn/dqn_agent.py -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn
+[0.964s] copying /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn/dqn_test.py -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn
+[0.964s] copying /home/zhihuili/RM_prac/build/turtlebot3_dqn/build/lib/turtlebot3_dqn/dqn_environment.py -> /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn
+[0.965s] byte-compiling /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn/dqn_agent.py to dqn_agent.cpython-310.pyc
+[0.970s] byte-compiling /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn/dqn_test.py to dqn_test.cpython-310.pyc
+[0.971s] byte-compiling /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn/dqn_environment.py to dqn_environment.cpython-310.pyc
+[0.973s] running install_data
+[0.973s] running install_egg_info
+[0.976s] removing '/home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn-1.0.3-py3.10.egg-info' (and everything under it)
+[0.976s] Copying ../../build/turtlebot3_dqn/turtlebot3_dqn.egg-info to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages/turtlebot3_dqn-1.0.3-py3.10.egg-info
+[0.977s] running install_scripts
+[1.001s] Installing action_graph script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.001s] Installing dqn_agent script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.001s] Installing dqn_coppeliasim script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.001s] Installing dqn_environment script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.002s] Installing dqn_gazebo script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.002s] Installing dqn_test script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.002s] Installing result_graph script to /home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/turtlebot3_dqn
+[1.002s] writing list of installed files to '/home/zhihuili/RM_prac/build/turtlebot3_dqn/install.log'
+[1.032s] Invoked command in '/home/zhihuili/RM_prac/src/turtlebot3_dqn' returned '0': CMAKE_PREFIX_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs:/home/zhihuili/RM_prac/install/upv_maps_pkg:/home/zhihuili/RM_prac/install/maintenance_mode_pkg:/home/zhihuili/RM_prac/install/turtlebot3_coppeliasim:/home/zhihuili/RM_prac/install/transformations_pkg:/home/zhihuili/RM_prac/install/slam_pkg:/home/zhihuili/RM_prac/install/ros2_vfh:/home/zhihuili/RM_prac/install/pure_pursuit_pkg:/home/zhihuili/RM_prac/install/navigation_pkg:/home/zhihuili/RM_prac/install/kinematic_control_pkg:/home/zhihuili/RM_prac/install/intro_ros_pkg:/home/zhihuili/RM_prac/install/bringup_turtlebot3_pkg LD_LIBRARY_PATH=/home/zhihuili/RM_prac/install/turtlebot3_msgs/lib:/home/zhihuili/sumo_env/lib:/home/zhihuili/RM_prac/install/pure_pursuit_pkg/lib:/home/zhihuili/RM_prac/install/kinematic_control_pkg/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/zhihuili/RM_prac/build/turtlebot3_dqn/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/zhihuili/RM_prac/install/turtlebot3_dqn/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_dqn build --build-base /home/zhihuili/RM_prac/build/turtlebot3_dqn/build install --record /home/zhihuili/RM_prac/build/turtlebot3_dqn/install.log --single-version-externally-managed install_data

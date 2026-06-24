@@ -88,7 +88,7 @@ Mini-batches aleatorios de una memoria de **500.000 transiciones**. Rompe la cor
 
 El objetivo del agente es aprender la **función de valor óptima** Q\*(s, a), que representa la recompensa esperada acumulada al tomar la acción `a` en el estado `s` y seguir la política óptima después:
 
-$$Q^{*}(s, a) = r + \gamma \cdot \max_{a'} Q^{*}(s', a')$$
+$$Q^\ast(s, a) = r + \gamma \cdot \max_{a'} Q^\ast(s', a')$$
 
 Donde:
 - **r** : recompensa inmediata al tomar la acción `a`
@@ -100,9 +100,9 @@ Donde:
 
 El DQN clásico usa la misma red para elegir y evaluar la acción, lo que produce **sobreestimación sistemática** de los valores Q. Double DQN desacopla ambas operaciones:
 
-$$a^{*} = \underset{a'}{\arg\max}\; Q_{online}(s', a')$$
+$$a^\ast = \underset{a'}{\arg\max}\; Q_{online}(s', a')$$
 
-$$Q(s, a) \leftarrow r + \gamma \cdot Q_{target}(s', a^{*})$$
+$$Q(s, a) \leftarrow r + \gamma \cdot Q_{target}(s', a^\ast)$$
 
 La red **online** elige la mejor acción (`argmax`), y la red **target** evalúa su valor. Esto reduce el sesgo de sobreestimación y acelera la convergencia.
 
@@ -127,7 +127,7 @@ La red neuronal se entrena minimizando el error cuadrático medio entre el valor
 
 $$\mathcal{L} = \frac{1}{B} \sum_{i=1}^{B} \left( Q(s_i, a_i) - y_i \right)^2$$
 
-$$y_i = \begin{cases} r_i & \text{si } done_i = \text{True} \\ r_i + \gamma \cdot Q_{target}(s'_i, a^{*}_i) & \text{si } done_i = \text{False} \end{cases}$$
+$$y_i = \begin{cases} r_i & \text{si } done_i = \text{True} \\ r_i + \gamma \cdot Q_{target}(s'_i, a^\ast_i) & \text{si } done_i = \text{False} \end{cases}$$
 
 Donde **B** = 128 (batch size).
 
@@ -190,7 +190,7 @@ Todos los valores del estado se normalizan para que estén en rangos comparables
 
 El LIDAR produce N lecturas en el rango frontal (0°–90° y 270°–360°). Se remuestrea a exactamente 25 valores equidistantes mediante interpolación lineal:
 
-$$\text{lidar}[k] = \text{interp}\left(\frac{k}{24} \cdot (N-1),\; \text{front\_ranges}\right), \quad k = 0, 1, ..., 24$$
+$$\mathrm{lidar}[k] = \mathrm{interp}\!\left(\frac{k}{24} \cdot (N-1),\ \mathrm{frontRanges}\right), \quad k = 0, 1, \dots, 24$$
 
 ---
 

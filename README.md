@@ -7,19 +7,20 @@ Robot autónomo TurtleBot3 Burger que aprende mediante **Deep Q-Network (DQN)** 
 ## Índice
 
 1. [Conceptos de Reinforcement Learning](#1-conceptos-de-reinforcement-learning)
-2. [Requisitos e instalación](#2-requisitos-e-instalación)
-3. [Entrenamiento](#3-entrenamiento)
-4. [Prueba de modelos](#4-prueba-de-modelos)
-5. [Arquitectura de la red neuronal](#5-arquitectura-de-la-red-neuronal)
-6. [El estado (State)](#6-el-estado-state)
-7. [Las acciones (Actions)](#7-las-acciones-actions)
-8. [Sistema de recompensa (Reward)](#8-sistema-de-recompensa-reward)
-9. [La tarea: 2 mesas sin orden fijo](#9-la-tarea-2-mesas-sin-orden-fijo)
-10. [Flujo de datos entre nodos ROS2](#10-flujo-de-datos-entre-nodos-ros2)
-11. [La escena CoppeliaSim](#11-la-escena-coppeliasim)
-12. [Estructura del proyecto](#12-estructura-del-proyecto)
-13. [Compatibilidad de versiones](#13-compatibilidad-de-versiones)
-14. [Visualización de resultados](#14-visualización-de-resultados)
+2. [Formulación matemática](#2-formulación-matemática)
+3. [Requisitos e instalación](#3-requisitos-e-instalación)
+4. [Entrenamiento](#4-entrenamiento)
+5. [Prueba de modelos](#5-prueba-de-modelos)
+6. [Arquitectura de la red neuronal](#6-arquitectura-de-la-red-neuronal)
+7. [El estado (State)](#7-el-estado-state)
+8. [Las acciones (Actions)](#8-las-acciones-actions)
+9. [Sistema de recompensa (Reward)](#9-sistema-de-recompensa-reward)
+10. [La tarea: 2 mesas sin orden fijo](#10-la-tarea-2-mesas-sin-orden-fijo)
+11. [Flujo de datos entre nodos ROS2](#11-flujo-de-datos-entre-nodos-ros2)
+12. [La escena CoppeliaSim](#12-la-escena-coppeliasim)
+13. [Estructura del proyecto](#13-estructura-del-proyecto)
+14. [Compatibilidad de versiones](#14-compatibilidad-de-versiones)
+15. [Visualización de resultados](#15-visualización-de-resultados)
 
 ---
 
@@ -79,7 +80,192 @@ Mini-batches aleatorios de una memoria de **500.000 transiciones**. Rompe la cor
 
 ---
 
-## 2. Requisitos e instalación
+## 2. Formulación matemática
+
+### 2.1 Algoritmo DQN
+
+#### Ecuación de Bellman (Q-learning)
+
+El objetivo del agente es aprender la **función de valor óptima** Q\*(s, a), que representa la recompensa esperada acumulada al tomar la acción `a` en el estado `s` y seguir la política óptima después:
+
+$$Q^*(s, a) = r + \gamma \cdot \max_{a'} Q^*(s', a')$$
+
+Donde:
+- **r** : recompensa inmediata al tomar la acción `a`
+- **γ** = 0.99 : factor de descuento — pondera más el presente que el futuro
+- **s'** : estado resultante tras ejecutar `a`
+- **max Q\*(s', a')** : máximo valor esperado desde `s'`
+
+#### Double DQN (reducción de sobreestimación)
+
+El DQN clásico usa la misma red para elegir y evaluar la acción, lo que produce **sobreestimación sistemática** de los valores Q. Double DQN desacopla ambas operaciones:
+
+$$a^* = \underset{a'}{\arg\max}\; Q_{online}(s', a')$$
+
+$$Q(s, a) \leftarrow r + \gamma \cdot Q_{target}(s', a^*)$$
+
+La red **online** elige la mejor acción (`argmax`), y la red **target** evalúa su valor. Esto reduce el sesgo de sobreestimación y acelera la convergencia.
+
+#### ε-greedy exploration
+
+El agente explora (acción aleatoria) con probabilidad **ε** y explota (mejor acción) con probabilidad **1−ε**:
+
+$$a = \begin{cases} \text{random}(0, 4) & \text{con probabilidad } \varepsilon \\ \underset{a}{\arg\max}\; Q(s, a) & \text{con probabilidad } 1 - \varepsilon \end{cases}$$
+
+ε decae exponencialmente:
+
+$$\varepsilon = \varepsilon_{min} + (1 - \varepsilon_{min}) \cdot e^{-N / \tau}$$
+
+Donde:
+- **εₘᵢₙ** = 0.05
+- **N** = `step_counter` (pasos totales ejecutados)
+- **τ** = `epsilon_decay` = 20.000 (constante de decaimiento)
+
+#### Función de pérdida (MSE)
+
+La red neuronal se entrena minimizando el error cuadrático medio entre el valor Q predicho y el valor objetivo calculado con la ecuación de Bellman:
+
+$$\mathcal{L} = \frac{1}{B} \sum_{i=1}^{B} \left( Q(s_i, a_i) - y_i \right)^2$$
+
+$$y_i = \begin{cases} r_i & \text{si } done_i = \text{True} \\ r_i + \gamma \cdot Q_{target}(s'_i, a^*_i) & \text{si } done_i = \text{False} \end{cases}$$
+
+Donde **B** = 128 (batch size).
+
+#### Learning Rate con decaimiento exponencial
+
+$$\eta_t = \eta_0 \cdot d^{\lfloor t / s \rfloor}$$
+
+- **η₀** = 0.0007 (learning rate inicial)
+- **d** = 0.96 (decay rate)
+- **s** = 10.000 (decay steps)
+- **t** = pasos de entrenamiento
+
+#### Gradient Clipping
+
+Para evitar gradientes explosivos durante la retropropagación:
+
+$$\| \nabla \mathcal{L} \| \leq 1.0$$
+
+Si la norma del gradiente supera 1.0, se reescala proporcionalmente.
+
+---
+
+### 2.2 Geometría del robot
+
+#### Distancia a una mesa
+
+Distancia euclídea entre el robot `(rx, ry)` y la mesa `(tx, ty)`:
+
+$$d_i = \sqrt{(x_{mesa_i} - x_{robot})^2 + (y_{mesa_i} - y_{robot})^2}$$
+
+#### Ángulo hacia una mesa
+
+Dirección del vector robot → mesa:
+
+$$\theta_{path} = \text{atan2}(y_{mesa} - y_{robot},\; x_{mesa} - x_{robot})$$
+
+Ángulo relativo entre la orientación del robot y la dirección a la mesa:
+
+$$\phi_i = \theta_{path} - \theta_{robot}$$
+
+Normalizado al rango **[−π, π]** mediante:
+
+$$\phi_i = \begin{cases} \phi_i - 2\pi & \text{si } \phi_i > \pi \\ \phi_i + 2\pi & \text{si } \phi_i < -\pi \\ \phi_i & \text{en otro caso} \end{cases}$$
+
+---
+
+### 2.3 Normalización del estado
+
+Todos los valores del estado se normalizan para que estén en rangos comparables [0, 1] o [−1, 1]. Esto mejora la convergencia del optimizador Adam:
+
+| Variable | Fórmula | Rango |
+|----------|---------|-------|
+| Distancia | `min(d / 5.0, 1.0)` | [0, 1] |
+| Ángulo | `φ / π` | [−1, 1] |
+| Posición X | `(rx + 3.5) / 7.0` | [0, 1] |
+| Posición Y | `(ry + 3.5) / 7.0` | [0, 1] |
+| LIDAR | `min_d / 3.5` | [0, 1] |
+
+#### Remuestreo LIDAR
+
+El LIDAR produce N lecturas en el rango frontal (0°–90° y 270°–360°). Se remuestrea a exactamente 25 valores equidistantes mediante interpolación lineal:
+
+$$\text{lidar}[k] = \text{interp}\left(\frac{k}{24} \cdot (N-1),\; \text{front\_ranges}\right), \quad k = 0, 1, ..., 24$$
+
+---
+
+### 2.4 Sistema de recompensa
+
+#### Recompensa por orientación hacia una mesa
+
+Factor de orientación con **mínimo garantizado** de 0.2 para evitar zonas sin gradiente:
+
+$$f_{orient}(\phi_i) = 0.2 + 0.8 \cdot \left(1 - \frac{|\phi_i|}{\pi}\right)$$
+
+- **φᵢ = 0** (perfectamente alineado): `f = 0.2 + 0.8 × 1.0 = 1.0`
+- **φᵢ = π** (dirección opuesta): `f = 0.2 + 0.8 × 0.0 = 0.2`
+
+#### Factor de distancia
+
+$$f_{dist}(d_i) = \frac{1}{\sqrt{1 + d_i}}$$
+
+- **d = 0**: `f = 1.0`
+- **d = 3m**: `f = 0.5`
+- **d = 8m**: `f ≈ 0.33`
+
+#### Recompensa total por mesas
+
+Para cada mesa `i` **no visitada**:
+
+$$R_{mesas} = \sum_{i \notin \text{visitadas}} \left[ f_{orient}(\phi_i) \cdot f_{dist}(d_i) \cdot 3.0 + \delta_i \cdot 2.0 \right]$$
+
+Donde **δᵢ = 1** si `dᵢ < best_dist[i]` (nuevo récord de cercanía), y **δᵢ = 0** en caso contrario.
+
+#### Penalización por obstáculos frontales
+
+Solo se activa si hay obstáculos a menos de 0.8m en el LIDAR frontal:
+
+$$R_{obs} = -\left(0.3 + 1.5 \cdot w_{decay}\right)$$
+
+Donde `w_decay` es una suma ponderada por la dirección del obstáculo respecto al robot:
+
+$$w_{decay} = \sum_{j \in \text{cercanos}} w_j \cdot \exp\left(-2.0 \cdot \max(r_j - 0.25,\; 0.01)\right)$$
+
+Los pesos direccionales `wⱼ` favorecen obstáculos frontales sobre los laterales:
+
+$$w_j = \frac{\cos^6(\theta_j) + 0.1}{\sum_k (\cos^6(\theta_k) + 0.1)}$$
+
+#### Recompensa total por paso
+
+$$R_{paso} = R_{mesas} + R_{obs} + R_{side} + R_{step} + R_{surv}$$
+
+| Término | Fórmula | Valor típico |
+|---------|---------|-------------|
+| `R_mesas` | Ecuación arriba | +0.3 a +4.1 |
+| `R_obs` | `−(0.3 + 1.5 × w_decay)` | 0 a −1.8 |
+| `R_side` | `−2.0` si min_obst < 0.35m | 0 o −2.0 |
+| `R_step` | `−0.02` | −0.02 |
+| `R_surv` | `+0.1` cada 25 pasos sin colisión | 0 o +0.1 |
+
+---
+
+### 2.5 Actualización del optimizador (Adam)
+
+El optimizador Adam actualiza los pesos **θ** de la red usando momentos de primer y segundo orden:
+
+$$m_t = \beta_1 \cdot m_{t-1} + (1 - \beta_1) \cdot \nabla \mathcal{L}$$
+
+$$v_t = \beta_2 \cdot v_{t-1} + (1 - \beta_2) \cdot (\nabla \mathcal{L})^2$$
+
+$$\hat{m}_t = \frac{m_t}{1 - \beta_1^t}, \quad \hat{v}_t = \frac{v_t}{1 - \beta_2^t}$$
+
+$$\theta_t = \theta_{t-1} - \eta_t \cdot \frac{\hat{m}_t}{\sqrt{\hat{v}_t} + 10^{-7}}$$
+
+Con parámetros por defecto: β₁ = 0.9, β₂ = 0.999.
+
+---
+
+## 3. Requisitos e instalación
 
 ### Software necesario
 
@@ -123,7 +309,7 @@ source ~/RM_prac/install/setup.bash
 
 ---
 
-## 3. Entrenamiento
+## 4. Entrenamiento
 
 ### Script: `train_waiter.sh`
 
@@ -173,7 +359,7 @@ train_waiter.sh
 
 ---
 
-## 4. Prueba de modelos
+## 5. Prueba de modelos
 
 ### Script: `test_models.sh`
 
@@ -207,7 +393,7 @@ Ep    2 | FALLO | Score:  -138.5 | Pasos:  600 | Mesas: 1/2 | Exito:  50.0% | Sc
 
 ---
 
-## 5. Arquitectura de la red neuronal
+## 6. Arquitectura de la red neuronal
 
 ### Estructura
 
@@ -236,7 +422,7 @@ Input(36) → Dense(1024, ReLU) → Dense(512, ReLU) → Dense(256, ReLU) → De
 
 ---
 
-## 6. El estado (State)
+## 7. El estado (State)
 
 La red neuronal recibe **36 valores normalizados** que representan el panorama completo de las 3 mesas, sin un goal fijo:
 
@@ -265,7 +451,7 @@ La red neuronal recibe **36 valores normalizados** que representan el panorama c
 
 ---
 
-## 7. Las acciones (Actions)
+## 8. Las acciones (Actions)
 
 5 velocidades angulares discretas con velocidad lineal constante (0.2 m/s):
 
@@ -281,7 +467,7 @@ Cada acción se ejecuta durante **0.8 segundos**, tras lo cual el robot frena y 
 
 ---
 
-## 8. Sistema de recompensa (Reward)
+## 9. Sistema de recompensa (Reward)
 
 **Principio fundamental**: no hay goal fijo. La recompensa por paso premia acercarse y orientarse hacia **cualquier** mesa no visitada. El robot aprende solo a qué mesa conviene ir.
 
@@ -361,7 +547,7 @@ Incentiva evitar obstáculos y mantener trayectorias seguras.
 
 ---
 
-## 9. La tarea: 2 mesas sin orden fijo
+## 10. La tarea: 2 mesas sin orden fijo
 
 ### Cómo funciona
 
@@ -417,7 +603,7 @@ Cargadas dinámicamente desde la escena CoppeliaSim mediante el servicio `table_
 
 ---
 
-## 10. Flujo de datos entre nodos ROS2
+## 11. Flujo de datos entre nodos ROS2
 
 ```
 ┌──────────────────────────────────────────────────────────┐
@@ -465,7 +651,7 @@ Cargadas dinámicamente desde la escena CoppeliaSim mediante el servicio `table_
 
 ---
 
-## 11. La escena CoppeliaSim
+## 12. La escena CoppeliaSim
 
 ### Elementos
 
@@ -496,7 +682,7 @@ ros2 launch turtlebot3_coppeliasim turtlebot3_coppeliasim_dqn_headless.launch.py
 
 ---
 
-## 12. Estructura del proyecto
+## 13. Estructura del proyecto
 
 ```
 RM_prac/
@@ -528,7 +714,7 @@ RM_prac/
 
 ---
 
-## 13. Compatibilidad de versiones
+## 14. Compatibilidad de versiones
 
 ### Metadato `state_version`
 
@@ -556,7 +742,7 @@ Cada checkpoint guarda en su `.json`:
 
 ---
 
-## 14. Visualización de resultados
+## 15. Visualización de resultados
 
 ### Gráficas en tiempo real
 

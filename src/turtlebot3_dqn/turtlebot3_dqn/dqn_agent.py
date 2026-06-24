@@ -117,7 +117,7 @@ class DQNAgent(Node):
 
     def __init__(self):
         super().__init__('dqn_agent')
-        self.declare_parameter('epsilon_decay', 6000)
+        self.declare_parameter('epsilon_decay', 20000)
         self.declare_parameter('max_training_episodes', 1000)
         self.declare_parameter('model_file', '')
         self.declare_parameter('use_gpu', False)
@@ -149,7 +149,7 @@ class DQNAgent(Node):
         lidar_samples = self.get_parameter(
             'lidar_samples'
         ).get_parameter_value().integer_value
-        self.state_size = lidar_samples + 5
+        self.state_size = lidar_samples + 11
         self.action_size = 5
 
         self.done = False
@@ -231,7 +231,7 @@ class DQNAgent(Node):
             loss=self.MeanSquaredError(),
             optimizer=self.Adam(learning_rate=self.learning_rate, clipnorm=1.0),
             run_eagerly=True)
-        self.update_target_after = 5000
+        self.update_target_after = 3000
         self.target_update_after_counter = 0
         self.update_target_model()
 
@@ -441,9 +441,9 @@ class DQNAgent(Node):
     def create_qnetwork(self):
         model = self.Sequential()
         model.add(self.Input(shape=(self.state_size,)))
+        model.add(self.Dense(1024, activation='relu'))
         model.add(self.Dense(512, activation='relu'))
         model.add(self.Dense(256, activation='relu'))
-        model.add(self.Dense(128, activation='relu'))
         model.add(self.Dense(self.action_size, activation='linear'))
         lr_schedule = self.tf.keras.optimizers.schedules.ExponentialDecay(
             initial_learning_rate=self.learning_rate,
@@ -478,7 +478,8 @@ class DQNAgent(Node):
 
         next_states = numpy.array([transition[3] for transition in data_in_mini_batch])
         next_states = next_states.squeeze()
-        next_qvalues_list = self.target_model.predict(next_states, verbose=0)
+        next_qvalues_online = self.model.predict(next_states, verbose=0)
+        next_qvalues_target = self.target_model.predict(next_states, verbose=0)
 
         x_train = []
         y_train = []
@@ -487,7 +488,8 @@ class DQNAgent(Node):
             current_q_values = current_qvalues_list[index]
 
             if not done:
-                future_reward = numpy.max(next_qvalues_list[index])
+                best_action = numpy.argmax(next_qvalues_online[index])
+                future_reward = next_qvalues_target[index][best_action]
                 desired_q = reward + self.discount_factor * future_reward
             else:
                 desired_q = reward

@@ -87,9 +87,11 @@ class DQNTest(Node):
         self.declare_parameter('use_gpu', False)
         self.declare_parameter('verbose', False)
         self.declare_parameter('model_dir', '')
+        self.declare_parameter('max_episodes', 0)
         model_file = self.get_parameter('model_file').get_parameter_value().string_value
         use_gpu = self.get_parameter('use_gpu').get_parameter_value().bool_value
         self.verbose = self.get_parameter('verbose').get_parameter_value().bool_value
+        self.max_episodes = self.get_parameter('max_episodes').get_parameter_value().integer_value
 
         # Lazy import TensorFlow and store as instance variables
         _ensure_tensorflow()
@@ -185,12 +187,24 @@ class DQNTest(Node):
         return int(numpy.argmax(q_values[0]))
 
     def run_test(self):
+        episodes = []
+        successes = 0
+        failures = 0
+        mesa_counts = [0, 0]
+        episode_num = 0
+
         while True:
+            episode_num += 1
+            if self.max_episodes > 0 and episode_num > self.max_episodes:
+                break
+
             done = False
             init = True
-            score = 0
+            score = 0.0
             local_step = 0
             next_state = []
+            mesas_visitadas = 0
+            prev_score = 0.0
 
             time.sleep(1.0)
 
@@ -214,11 +228,53 @@ class DQNTest(Node):
                     reward = future.result().reward
                     done = future.result().done
                     score += reward
+
+                    if reward - prev_score >= 90:
+                        mesas_visitadas += 1
+                    prev_score = reward
                     init = False
                 else:
                     self.get_logger().error(f'Service call failure: {future.exception()}')
+                    done = True
 
                 time.sleep(0.01)
+
+            reached_all = mesas_visitadas >= 2
+            if reached_all:
+                successes += 1
+                status = 'EXITO'
+            else:
+                failures += 1
+                status = 'FALLO'
+
+            for i in range(mesas_visitadas):
+                if i < 2:
+                    mesa_counts[i] += 1
+
+            episodes.append(score)
+            avg_score = sum(episodes) / len(episodes)
+            success_rate = successes / episode_num * 100
+
+            print(f'Ep {episode_num:>4d} | {status:>5s} | Score: {score:>8.1f} | Pasos: {local_step:>4d} | '
+                  f'Mesas: {mesas_visitadas}/2 | '
+                  f'Exito: {success_rate:>5.1f}% | Score prom: {avg_score:>7.1f}')
+
+            if self.max_episodes > 0 and episode_num >= self.max_episodes:
+                break
+
+        print()
+        print('=' * 65)
+        print(' RESUMEN FINAL')
+        print('=' * 65)
+        print(f'  Episodios totales:     {episode_num}')
+        print(f'  Exitos (2 mesas):      {successes}  ({success_rate:.1f}%)')
+        print(f'  Fallos:                {failures}')
+        print(f'  Score promedio:        {avg_score:.1f}')
+        print(f'  Score max:             {max(episodes):.1f}')
+        print(f'  Score min:             {min(episodes):.1f}')
+        print(f'  Tasa 1 mesa:           {mesa_counts[0]/max(1,episode_num)*100:.1f}%')
+        print(f'  Tasa 2 mesas:          {mesa_counts[1]/max(1,episode_num)*100:.1f}%')
+        print('=' * 65)
 
 
 def main(args=None):

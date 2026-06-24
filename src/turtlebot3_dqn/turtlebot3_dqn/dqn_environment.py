@@ -20,6 +20,7 @@
 import json
 import math
 import os
+import random
 
 from geometry_msgs.msg import Twist
 from geometry_msgs.msg import TwistStamped
@@ -46,43 +47,42 @@ class RLEnvironment(Node):
     def __init__(self):
         super().__init__('rl_environment')
         self.declare_parameter('lidar_samples', 25)
-        self.two_tables_bonus = False
+        self.declare_parameter('max_step', 800)
+        self.tables_loaded = False
 
-        #Ubicacion de las mesas
+        # Ubicacion de las mesas (fallback, se sobreescriben con la escena)
         self.tables = [
-            [3, 3],     #mesa1
-            [0, -3],    #mesa2
-            [-3, 0],    #mesa3
+            [3, 3],     # mesa1
+            [0, -3],    # mesa2
+            [-3, 0],    # mesa3
         ]
         print('Mesas: Mesa1 (%.1f, %.1f), Mesa2 (%.1f, %.1f), Mesa3 (%.1f, %.1f)' % (
             self.tables[0][0], self.tables[0][1],
             self.tables[1][0], self.tables[1][1],
             self.tables[2][0], self.tables[2][1]))
-        self.current_table = 0
-
-        self.goal_pose_x = self.tables[0][0]
-        self.goal_pose_y = self.tables[0][1]
+        print('Tarea: servir 2 mesas cualesquiera (sin orden fijo)')
+        self.tables_needed = 2
+        self.visited_tables = [False, False, False]
+        self.tables_visited_count = 0
+        self.best_dist = [999.0, 999.0, 999.0]
+        self.best_target_idx = -1
+        self.best_target_dist = 0.0
+        self.best_target_angle = 0.0
 
         self.robot_pose_x = 0.0
         self.robot_pose_y = 0.0
 
         self.action_size = 5
-        self.max_step = 800
+        self.max_step = self.get_parameter('max_step').get_parameter_value().integer_value
 
         self.done = False
         self.fail = False
         self.succeed = False
 
-        self.goal_angle = 0.0
-        self.goal_distance = 1.0
-        self.init_goal_distance = 0.5
         self.scan_ranges = []
         self.front_ranges = []
         self.min_obstacle_distance = 10.0
-        self.is_front_min_actual_front = False
 
-        self.prev_goal_distance = 1.0
-        self.best_goal_distance = 1.0
         self.local_step = 0
         self.table_reached_this_step = False
         self.stop_cmd_vel_timer = None
@@ -146,6 +146,34 @@ class RLEnvironment(Node):
             self.reset_environment_callback
         )
 
+    def try_load_tables(self):
+        try:
+            if not self.table_goals_client.wait_for_service(timeout_sec=2.0):
+                self.tables_loaded = True
+                self.get_logger().warn('table_goals service not available, using default coordinates')
+                return
+            req = Trigger.Request()
+            future = self.table_goals_client.call_async(req)
+            rclpy.spin_until_future_complete(self, future, timeout_sec=2.0)
+            self.tables_loaded = True
+            if future.done() and future.result() is not None and future.result().success:
+                data = json.loads(future.result().message)
+                tables = data.get('tables', [])
+                if tables:
+                    self.tables = []
+                    for t in tables:
+                        self.tables.append([t['x'], t['y']])
+                    self.get_logger().info('Tables loaded from scene')
+                    for i, t in enumerate(self.tables):
+                        self.get_logger().info('  Mesa %d: [%.2f, %.2f]' % (i + 1, t[0], t[1]))
+                else:
+                    self.get_logger().warn('table_goals returned empty, using defaults')
+            else:
+                self.get_logger().warn('table_goals failed, using default coordinates')
+        except Exception as e:
+            self.tables_loaded = True
+            self.get_logger().error('table_goals exception: %s' % str(e))
+
     def get_table_positions(self):
         while not self.table_goals_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().warn('table_goals service not available, waiting ...')
@@ -167,14 +195,22 @@ class RLEnvironment(Node):
         else:
             self.get_logger().error('table_goals service call failed')
 
+    def reset_episode_state(self):
+        self.visited_tables = [False, False, False]
+        self.tables_visited_count = 0
+        self.best_dist = [999.0, 999.0, 999.0]
+        self.succeed = False
+        self.fail = False
+        self.done = False
+        self.local_step = 0
+        self.survival_steps = 0
+        self.table_reached_this_step = False
+
     def make_environment_callback(self, request, response):
         self.get_logger().info('Make environment called')
         self.get_table_positions()
-        self.goal_pose_x = self.tables[0][0]
-        self.goal_pose_y = self.tables[0][1]
-        self.get_logger().info(
-            'Goal inicial: Mesa 1 [%.2f, %.2f]' % (self.goal_pose_x, self.goal_pose_y)
-        )
+        self.reset_episode_state()
+        self.get_logger().info('Entorno listo - sin goal fijo, recompensa guia a las mesas')
         while not self.initialize_environment_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().warn(
                 'service for initialize the environment is not available, waiting ...'
@@ -187,14 +223,8 @@ class RLEnvironment(Node):
         return response
 
     def reset_environment_callback(self, request, response):
-        self.current_table = 0
-        self.two_tables_bonus = False
-        self.goal_pose_x = self.tables[0][0]
-        self.goal_pose_y = self.tables[0][1]
-        self.best_goal_distance = 999.0
+        self.reset_episode_state()
         state = self.calculate_state()
-        self.init_goal_distance = state[0]
-        self.prev_goal_distance = self.init_goal_distance
         response.state = state
 
         return response
@@ -205,9 +235,6 @@ class RLEnvironment(Node):
         future = self.task_succeed_client.call_async(Goal.Request())
         rclpy.spin_until_future_complete(self, future)
         if future.result() is not None:
-            response = future.result()
-            self.goal_pose_x = response.pose_x
-            self.goal_pose_y = response.pose_y
             self.get_logger().info('service for task succeed finished')
         else:
             self.get_logger().error('task succeed service call failed')
@@ -218,11 +245,6 @@ class RLEnvironment(Node):
         future = self.task_failed_client.call_async(Goal.Request())
         rclpy.spin_until_future_complete(self, future)
         if future.result() is not None:
-            response = future.result()
-            self.goal_pose_x = response.pose_x
-            self.goal_pose_y = response.pose_y
-            self.current_table = 0
-            self.two_tables_bonus = False
             self.get_logger().info('service for task failed finished')
         else:
             self.get_logger().error('task failed service call failed')
@@ -261,35 +283,24 @@ class RLEnvironment(Node):
         self.robot_pose_y = msg.pose.pose.position.y
         _, _, self.robot_pose_theta = self.euler_from_quaternion(msg.pose.pose.orientation)
 
-        goal_distance = math.sqrt(
-            (self.goal_pose_x - self.robot_pose_x) ** 2
-            + (self.goal_pose_y - self.robot_pose_y) ** 2)
-        path_theta = math.atan2(
-            self.goal_pose_y - self.robot_pose_y,
-            self.goal_pose_x - self.robot_pose_x)
-
-        goal_angle = path_theta - self.robot_pose_theta
-        if goal_angle > math.pi:
-            goal_angle -= 2 * math.pi
-
-        elif goal_angle < -math.pi:
-            goal_angle += 2 * math.pi
-
-        self.goal_distance = goal_distance
-        self.goal_angle = goal_angle
-
     def calculate_state(self):
         state = []
-        dist_norm = min(self.goal_distance / 5.0, 1.0)
-        state.append(float(dist_norm))
-        angle_norm = self.goal_angle / math.pi
-        state.append(float(angle_norm))
-        table_norm = self.current_table / max(1, len(self.tables) - 1)
-        state.append(float(table_norm))
-        robot_x_norm = (self.robot_pose_x + 3.5) / 7.0
-        robot_y_norm = (self.robot_pose_y + 3.5) / 7.0
-        state.append(float(robot_x_norm))
-        state.append(float(robot_y_norm))
+
+        for tx, ty in self.tables:
+            d = math.sqrt((tx - self.robot_pose_x) ** 2 + (ty - self.robot_pose_y) ** 2)
+            state.append(float(min(d / 5.0, 1.0)))
+        for tx, ty in self.tables:
+            path_theta = math.atan2(ty - self.robot_pose_y, tx - self.robot_pose_x)
+            goal_angle = path_theta - self.robot_pose_theta
+            if goal_angle > math.pi:
+                goal_angle -= 2 * math.pi
+            elif goal_angle < -math.pi:
+                goal_angle += 2 * math.pi
+            state.append(float(goal_angle / math.pi))
+        for v in self.visited_tables:
+            state.append(1.0 if v else 0.0)
+        state.append(float((self.robot_pose_x + 3.5) / 7.0))
+        state.append(float((self.robot_pose_y + 3.5) / 7.0))
 
         lidar_samples = self.get_parameter(
             'lidar_samples'
@@ -310,49 +321,52 @@ class RLEnvironment(Node):
         self.local_step += 1
         self.table_reached_this_step = False
 
-        if self.goal_distance < 0.50:
-            """"
-            Codigo Profesor
-            self.get_logger().info('Goal Reached')
-            self.succeed = True
-            self.done = True
-            if ROS_DISTRO == 'humble':
-                self.cmd_vel_pub.publish(Twist())
-            else:
-                self.cmd_vel_pub.publish(TwistStamped())
-            self.local_step = 0
-            self.call_task_succeed()
-            """
-            self.get_logger().info(
-            f'Mesa {self.current_table + 1} alcanzada'
-            )
+        self.best_target_idx = -1
+        best_score = -1.0
+        for i, visited in enumerate(self.visited_tables):
+            if not visited:
+                tx = self.tables[i][0]
+                ty = self.tables[i][1]
+                d = math.sqrt((tx - self.robot_pose_x) ** 2 + (ty - self.robot_pose_y) ** 2)
+                path_theta = math.atan2(ty - self.robot_pose_y, tx - self.robot_pose_x)
+                angle = path_theta - self.robot_pose_theta
+                if angle > math.pi:
+                    angle -= 2 * math.pi
+                elif angle < -math.pi:
+                    angle += 2 * math.pi
+                score = (1.0 - abs(angle) / math.pi) / (1.0 + d)
+                if score > best_score:
+                    best_score = score
+                    self.best_target_idx = i
+                    self.best_target_dist = d
+                    self.best_target_angle = angle
 
-            self.table_reached_this_step = True
-            self.current_table += 1
-            if self.current_table == 2:
-                self.two_tables_bonus = True
+        if self.local_step == 1:
+            for idx, t in enumerate(self.tables):
+                self.get_logger().info('Mesa %d en (%.2f, %.2f)' % (idx + 1, t[0], t[1]))
 
-            if self.current_table >= len(self.tables):
-
-                self.get_logger().info(
-                    'Todas las mesas servidas'
-                )
-
-                self.succeed = True
-                self.done = True
-
-                self.local_step = 0
-
-            else:
-
-                self.goal_pose_x = self.tables[self.current_table][0]
-                self.goal_pose_y = self.tables[self.current_table][1]
-                self.best_goal_distance = 999.0
-                self.prev_goal_distance = self.goal_distance
-
-                self.get_logger().info(
-                    f'Nuevo objetivo: Mesa {self.current_table + 1}'
-                )
+        for i, visited in enumerate(self.visited_tables):
+            if not visited:
+                tx = self.tables[i][0]
+                ty = self.tables[i][1]
+                d = math.sqrt((tx - self.robot_pose_x) ** 2 + (ty - self.robot_pose_y) ** 2)
+                if d < 0.70:
+                    self.visited_tables[i] = True
+                    self.tables_visited_count += 1
+                    self.table_reached_this_step = True
+                    self.survival_steps = 0
+                    self.get_logger().info(
+                        'Mesa %d alcanzada (%d/%d) | Robot: (%.2f, %.2f) | Mesa: (%.2f, %.2f) | Dist: %.3f' % (
+                            i + 1, self.tables_visited_count, self.tables_needed,
+                            self.robot_pose_x, self.robot_pose_y,
+                            tx, ty, d)
+                    )
+                    if self.tables_visited_count >= self.tables_needed:
+                        self.get_logger().info('Tarea completada: 2 mesas servidas')
+                        self.succeed = True
+                        self.done = True
+                        self.local_step = 0
+                    break
 
 
         if self.min_obstacle_distance < 0.15:
@@ -415,48 +429,72 @@ class RLEnvironment(Node):
         return reward
 
     def calculate_reward(self):
-        yaw_reward = 1.0 - abs(self.goal_angle) / math.pi
         obstacle_reward = self.compute_weighted_obstacle_reward()
-        delta_dist = self.prev_goal_distance - self.goal_distance
-        if delta_dist > 0:
-            distance_reward = delta_dist * 15.0
-        else:
-            distance_reward = delta_dist * 5.0
         step_penalty = -0.02
         side_penalty = -2.0 if self.min_obstacle_distance < 0.35 else 0.0
 
-        reward = yaw_reward + obstacle_reward + distance_reward + step_penalty + side_penalty
+        self.survival_steps += 1
+        survival_bonus = 0.1 if self.survival_steps > 0 and self.survival_steps % 25 == 0 else 0.0
 
-        if self.goal_distance < self.best_goal_distance:
-            reward += 0.5
-            self.best_goal_distance = self.goal_distance
+        table_reward = 0.0
+        for i, visited in enumerate(self.visited_tables):
+            if not visited:
+                tx = self.tables[i][0]
+                ty = self.tables[i][1]
+                d = math.sqrt((tx - self.robot_pose_x) ** 2 + (ty - self.robot_pose_y) ** 2)
+                path_theta = math.atan2(ty - self.robot_pose_y, tx - self.robot_pose_x)
+                angle = path_theta - self.robot_pose_theta
+                if angle > math.pi:
+                    angle -= 2 * math.pi
+                elif angle < -math.pi:
+                    angle += 2 * math.pi
+
+                orient_factor = 0.2 + 0.8 * (1.0 - abs(angle) / math.pi)
+                dist_factor = 1.0 / math.sqrt(1.0 + d)
+                table_reward += orient_factor * dist_factor * 3.0
+
+                if d < self.best_dist[i]:
+                    table_reward += 2.0
+                    self.best_dist[i] = d
+
+        reward = table_reward + obstacle_reward + step_penalty + side_penalty + survival_bonus
 
         if self.table_reached_this_step:
-            reward += 100.0
-            self.get_logger().info('BONUS +100 por Mesa %d' % (self.current_table))
-            if self.two_tables_bonus:
-                reward += 50.0
-                self.get_logger().info('BONUS EXTRA +50 por 2 mesas alcanzadas')
-                self.two_tables_bonus = False
+            if self.tables_visited_count >= self.tables_needed:
+                reward += 300.0
+                self.get_logger().info('BONUS +300 por completar las 2 mesas')
+            else:
+                reward += 100.0
+                self.get_logger().info('BONUS +100 por mesa alcanzada (%d/%d)' % (
+                    self.tables_visited_count, self.tables_needed))
 
         if self.succeed:
-            reward += 300.0
+            reward += 200.0
         elif self.fail:
             reward -= 50.0
 
         if self.local_step % 50 == 0:
-            print('Step: %d, Mesa: %d, GoalDist: %.2f, GoalAngle: %.2f, Delta: %.3f, Obst: %.2f, Total: %.2f' % (
-                self.local_step, self.current_table + 1,
-                self.goal_distance, self.goal_angle,
-                delta_dist,
+            print('Step: %d, Goal: M%d, Dist: %.2f, Angle: %.2f, Mesas: %d/%d, Total: %.2f, Obst: %.2f, Tables: %.2f, Surv: %d' % (
+                self.local_step,
+                self.best_target_idx + 1 if self.best_target_idx >= 0 else 0,
+                self.best_target_dist,
+                self.best_target_angle,
+                self.tables_visited_count, self.tables_needed,
+                reward,
                 obstacle_reward,
-                reward))
+                table_reward,
+                self.survival_steps))
 
-        self.prev_goal_distance = self.goal_distance
         return reward
 
     def rl_agent_interface_callback(self, request, response):
         action = request.action
+
+        if hasattr(request, 'init') and request.init:
+            if not self.tables_loaded:
+                self.try_load_tables()
+            self.reset_episode_state()
+
         if ROS_DISTRO == 'humble':
             msg = Twist()
             msg.linear.x = 0.2
@@ -468,7 +506,6 @@ class RLEnvironment(Node):
 
         self.cmd_vel_pub.publish(msg)
         if self.stop_cmd_vel_timer is None:
-            self.prev_goal_distance = self.init_goal_distance
             self.stop_cmd_vel_timer = self.create_timer(0.8, self.timer_callback)
         else:
             self.destroy_timer(self.stop_cmd_vel_timer)

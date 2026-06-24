@@ -28,12 +28,12 @@ SCENE_NUM=5
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 echo "============================================"
-echo " Entrenamiento DQN - Escena Waiter (3 mesas)"
+echo " Entrenamiento DQN - Camarero 2 mesas (sin orden)"
 echo "============================================"
 echo " Workspace  : $SCRIPT_DIR"
 echo " Escena     : $SCENE_NUM (waiter)"
 echo " Episodios  : $MAX_EPISODES"
-echo " Epsilon decay: 12000"
+echo " Epsilon decay: 20000"
 echo " max_step   : 600"
 echo " action_dur : 0.3s"
 echo " Red neuronal: [512,256,128]"
@@ -123,9 +123,10 @@ echo ""
 
 # Construir argumentos del agente
 AGENT_ARGS=()
-AGENT_ARGS+=(-p "epsilon_decay:=12000")
+AGENT_ARGS+=(-p "epsilon_decay:=20000")
 AGENT_ARGS+=(-p "max_training_episodes:=$MAX_EPISODES")
 AGENT_ARGS+=(-p "verbose:=false")
+AGENT_ARGS+=(-p "lidar_samples:=25")
 
 if [ "$USE_GPU" != "cpu" ]; then
     AGENT_ARGS+=(-p "use_gpu:=true")

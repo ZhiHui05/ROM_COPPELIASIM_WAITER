@@ -97,6 +97,8 @@ class CoppeliaSimInterface(Node):
         self.reset_simulation_client.call_async(reset_req)
 
     def task_succeed_callback(self, request, response):
+        self.reset_simulation()
+        time.sleep(0.2)
         self.new_goal()
         response.pose_x = self.entity_pose_x
         response.pose_y = self.entity_pose_y

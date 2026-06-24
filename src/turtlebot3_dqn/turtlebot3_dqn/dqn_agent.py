@@ -441,9 +441,9 @@ class DQNAgent(Node):
     def create_qnetwork(self):
         model = self.Sequential()
         model.add(self.Input(shape=(self.state_size,)))
-        model.add(self.Dense(1024, activation='relu'))
-        model.add(self.Dense(512, activation='relu'))
-        model.add(self.Dense(256, activation='relu'))
+        model.add(self.Dense(1024, activation='leaky_relu'))
+        model.add(self.Dense(512, activation='leaky_relu'))
+        model.add(self.Dense(256, activation='leaky_relu'))
         model.add(self.Dense(self.action_size, activation='linear'))
         lr_schedule = self.tf.keras.optimizers.schedules.ExponentialDecay(
             initial_learning_rate=self.learning_rate,

@@ -398,7 +398,7 @@ Ep    2 | FALLO | Score:  -138.5 | Pasos:  600 | Mesas: 1/2 | Exito:  50.0% | Sc
 ### Estructura
 
 ```
-Input(36) → Dense(1024, ReLU) → Dense(512, ReLU) → Dense(256, ReLU) → Dense(5, linear)
+Input(36) → Dense(1024, LeakyReLU) → Dense(512, LeakyReLU) → Dense(256, LeakyReLU) → Dense(5, linear)
 ```
 
 ### Hiperparámetros
@@ -406,7 +406,7 @@ Input(36) → Dense(1024, ReLU) → Dense(512, ReLU) → Dense(256, ReLU) → De
 | Parámetro | Valor | Justificación |
 |-----------|-------|---------------|
 | Capas ocultas | 1024, 512, 256 | Capacidad para 36 entradas |
-| Activación | ReLU | Evita vanishing gradient |
+| Activación | LeakyReLU | Evita neuronas muertas y vanishing gradient |
 | Salida | Linear | Los valores Q pueden ser cualquier número real |
 | Optimizador | Adam (`clipnorm=1.0`, LR decay ×0.96/10k pasos) | Gradientes estables, afinamiento progresivo |
 | Learning rate inicial | 0.0007 | Convergencia estable |
@@ -531,8 +531,8 @@ Incentiva evitar obstáculos y mantener trayectorias seguras.
 
 | Evento | Condición | Recompensa |
 |--------|-----------|------------|
-| Alcanzar 1ª mesa | Dist < 0.6m a cualquier mesa no visitada | **+100** |
-| Alcanzar 2ª mesa | Dist < 0.6m a la segunda mesa | **+300** |
+| Alcanzar 1ª mesa | Dist < 0.7m a cualquier mesa no visitada | **+100** |
+| Alcanzar 2ª mesa | Dist < 0.7m a la segunda mesa | **+300** |
 | Éxito (2 mesas) | Bonus final | **+200** extra |
 | Colisión | Obstáculo < 0.15m | **−50** |
 | Timeout | 600 pasos sin completar | **−50** |
@@ -582,7 +582,7 @@ En cada episodio, el robot descubre por sí mismo qué camino tomar. La recompen
 
 ### Detección de mesa alcanzada
 
-Se considera que el robot ha llegado a una mesa cuando la distancia euclídea entre el robot y el dummy de la mesa es < **0.6 metros**. La detección se hace para **todas** las mesas no visitadas en cada paso — no solo para una "meta" fija.
+Se considera que el robot ha llegado a una mesa cuando la distancia euclídea entre el robot y el dummy de la mesa es < **0.7 metros**. La detección se hace para **todas** las mesas no visitadas en cada paso — no solo para una "meta" fija.
 
 ### Coordenadas de las mesas
 
